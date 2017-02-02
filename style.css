@@ -144,15 +144,34 @@ video#bgvid {
 
 
 
-/* Footer style */
-.site-info{
-	background: #333;
+
+
+/* Footer 03: Social Media */
+.footer-social-media {
+  padding: 30px 0 10px;
+}
+.footer-social-media nav{
+  width: 750px;
+  margin: 0 auto;
+}
+.footer-social-media nav ul{
+  margin-left: -40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.footer-social-media nav ul li{
+  list-style: none;
+}
+
+/* Footer 04: Info */
+.footer-info {
 	text-align: center;
 	font-size: 12px;
-	padding: 10px 0;
 	letter-spacing: 1px;
 	font-weight: 100;
 }
+
 
 
 

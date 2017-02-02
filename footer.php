@@ -35,7 +35,7 @@
 		</div> -->
 		<!-- .footer-social-media -->
 
-		<div id="footer-sidebar1">
+		<div id="footer-sidebar1" class="footer-shop-btn">
 		  <?php
 		    if(is_active_sidebar('footer-sidebar-1')){
 		      dynamic_sidebar('footer-sidebar-1');
@@ -43,7 +43,7 @@
 		  ?>
 		</div>
 
-		<div id="footer-sidebar2">
+		<div id="footer-sidebar2" class="footer-newsletter">
 		  <?php
 		    if(is_active_sidebar('footer-sidebar-2')){
 		      dynamic_sidebar('footer-sidebar-2');
@@ -51,7 +51,7 @@
 		  ?>
 		</div>
 
-		<div id="footer-sidebar3">
+		<div id="footer-sidebar3" class="footer-social-media">
 		  <?php
 		    if(is_active_sidebar('footer-sidebar-3')){
 		      dynamic_sidebar('footer-sidebar-3');
@@ -59,7 +59,7 @@
 		  ?>
 		</div>
 
-		<div id="footer-sidebar4" class="site-info">
+		<div id="footer-sidebar4" class="footer-info">
 		  <?php
 		    if(is_active_sidebar('footer-sidebar-4')){
 		      dynamic_sidebar('footer-sidebar-4');

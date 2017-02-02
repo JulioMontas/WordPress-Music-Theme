@@ -283,41 +283,57 @@ class SocialMediaWidgetBTN extends WP_Widget {
 			echo $before_title . $widget_title . $after_title;
 	    ?>
 	        <div class="smb-<?php echo $widget_id; ?>">
+						<nav>
+						<ul>
 	        	<?php if ( !empty($s_url) ): ?>
-	        		<a class="spotify" title="Spotify" target="_blank" href="<?php echo esc_url($s_url) ?>">
-								<i class="fa fa-spotify fa-3x" aria-hidden="true" style="color:#84BD00;"></i>
-	        		</a>
+							<li>
+	        		  <a class="spotify" title="Spotify" target="_blank" href="<?php echo esc_url($s_url) ?>">
+							  	<i class="fa fa-spotify fa-2x" aria-hidden="true" style="color:#84BD00;"></i>
+	        		  </a>
+							</li>
 	        	<?php endif; ?>
 
 	        	<?php if ( !empty($sc_url) ): ?>
+							<li>
 	        		<a class="soundcloud" title="SoundCloud" target="_blank" href="<?php echo esc_url($sc_url); ?>">
-								<i class="fa fa-soundcloud fa-3x" aria-hidden="true" style="color:#FF7700;"></i>
+								<i class="fa fa-soundcloud fa-2x" aria-hidden="true" style="color:#FF7700;"></i>
 	        		</a>
+							</li>
 				<?php endif; ?>
 
 	        	<?php if ( !empty($a_url) ): ?>
+							<li>
 	        		<a class="apple" title="Apple" target="_blank" href="<?php echo esc_url($a_url); ?>">
-								<i class="fa fa-apple fa-3x" aria-hidden="true" style="color:#999999;"></i>
+								<i class="fa fa-apple fa-2x" aria-hidden="true" style="color:#999999;"></i>
 	        		</a>
+							</li>
 				<?php endif; ?>
 
 	        	<?php if ( !empty($tw_url) ): ?>
+							<li>
 	        		<a class="twitter" title="Twitter" target="_blank" href="<?php echo esc_url($tw_url); ?>">
-								<i class="fa fa-twitter fa-3x" aria-hidden="true" style="color:#0084B4;"></i>
+								<i class="fa fa-twitter fa-2x" aria-hidden="true" style="color:#0084B4;"></i>
 	        		</a>
+							</li>
 				<?php endif; ?>
 
 	        	<?php if ( !empty($yt_url) ): ?>
+							<li>
 	        		<a class="youtube" title="Youtube" target="_blank" href="<?php echo esc_url($yt_url); ?>">
-								<i class="fa fa-youtube-play fa-3x" aria-hidden="true" style="color:#BB0000;"></i>
+								<i class="fa fa-youtube-play fa-2x" aria-hidden="true" style="color:#BB0000;"></i>
 	        		</a>
+							</li>
 				<?php endif; ?>
 
 	        	<?php if ( !empty($email) ): ?>
+							<li>
 	        		<a class="email" href="mailto:<?php echo $email ?>">
-								<i class="fa fa-envelope fa-3x" aria-hidden="true" style="color:#553290;"></i>
+								<i class="fa fa-envelope fa-2x" aria-hidden="true" style="color:#553290;"></i>
 	        		</a>
+							</li>
 				<?php endif; ?>
+				</ul>
+				</nav>
 
 
 	        </div>
