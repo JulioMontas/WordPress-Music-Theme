@@ -285,37 +285,37 @@ class SocialMediaWidgetBTN extends WP_Widget {
 	        <div class="smb-<?php echo $widget_id; ?>">
 	        	<?php if ( !empty($s_url) ): ?>
 	        		<a class="spotify" title="Spotify" target="_blank" href="<?php echo esc_url($s_url) ?>">
-								<i class="fa fa-spotify fa-3x" aria-hidden="true"></i>
+								<i class="fa fa-spotify fa-3x" aria-hidden="true" style="color:#84BD00;"></i>
 	        		</a>
 	        	<?php endif; ?>
 
 	        	<?php if ( !empty($sc_url) ): ?>
 	        		<a class="soundcloud" title="SoundCloud" target="_blank" href="<?php echo esc_url($sc_url); ?>">
-								<i class="fa fa-soundcloud fa-3x" aria-hidden="true"></i>
+								<i class="fa fa-soundcloud fa-3x" aria-hidden="true" style="color:#FF7700;"></i>
 	        		</a>
 				<?php endif; ?>
 
 	        	<?php if ( !empty($a_url) ): ?>
 	        		<a class="apple" title="Apple" target="_blank" href="<?php echo esc_url($a_url); ?>">
-								<i class="fa fa-apple fa-3x" aria-hidden="true"></i>
+								<i class="fa fa-apple fa-3x" aria-hidden="true" style="color:#999999;"></i>
 	        		</a>
 				<?php endif; ?>
 
 	        	<?php if ( !empty($tw_url) ): ?>
 	        		<a class="twitter" title="Twitter" target="_blank" href="<?php echo esc_url($tw_url); ?>">
-								<i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+								<i class="fa fa-twitter fa-3x" aria-hidden="true" style="color:#0084B4;"></i>
 	        		</a>
 				<?php endif; ?>
 
 	        	<?php if ( !empty($yt_url) ): ?>
 	        		<a class="youtube" title="Youtube" target="_blank" href="<?php echo esc_url($yt_url); ?>">
-								<i class="fa fa-youtube fa-3x" aria-hidden="true"></i>
+								<i class="fa fa-youtube-play fa-3x" aria-hidden="true" style="color:#BB0000;"></i>
 	        		</a>
 				<?php endif; ?>
 
 	        	<?php if ( !empty($email) ): ?>
 	        		<a class="email" href="mailto:<?php echo $email ?>">
-								<i class="fa fa-mail fa-3x" aria-hidden="true"></i>
+								<i class="fa fa-envelope fa-3x" aria-hidden="true" style="color:#553290;"></i>
 	        		</a>
 				<?php endif; ?>
 
