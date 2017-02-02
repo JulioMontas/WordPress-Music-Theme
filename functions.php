@@ -60,7 +60,7 @@ function sonia_choi_music_2017_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	
+
 	// add_theme_support( 'custom-background', apply_filters( 'sonia_choi_music_2017_custom_background_args', array(
 	// 	'default-image' => '%1$s/images/background.jpg',
 	// 	'default-color' => 'ffffff',
@@ -99,8 +99,66 @@ function sonia_choi_music_2017_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	// First footer widget area, located in the footer. Empty by default.
+	register_sidebar( array(
+			'name' => __( 'Footer Sidebar 1', 'sonia-choi-music-2017' ),
+			'id' => 'footer-sidebar-1',
+			'description' => __( 'Appears in the footer area', 'sonia-choi-music-2017' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+	) );
+
+	// Second Footer Widget Area, located in the footer. Empty by default.
+	register_sidebar( array(
+			'name' => __( 'Footer Sidebar 2', 'sonia-choi-music-2017' ),
+			'id' => 'footer-sidebar-2',
+			'description' => __( 'Appears in the footer area', 'sonia-choi-music-2017' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+	) );
+
+	// Third Footer Widget Area, located in the footer. Empty by default.
+	register_sidebar( array(
+			'name' => __( 'Footer Sidebar 3', 'sonia-choi-music-2017' ),
+			'id' => 'footer-sidebar-3',
+			'description' => __( 'Appears in the footer area', 'sonia-choi-music-2017' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+	) );
+
+	// Fourth Footer Widget Area, located in the footer. Empty by default.
+	register_sidebar( array(
+			'name' => __( 'Footer Sidebar 4', 'sonia-choi-music-2017' ),
+			'id' => 'footer-sidebar-4',
+			'description' => __( 'Appears in the footer area', 'sonia-choi-music-2017' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+	) );
+
+
 }
 add_action( 'widgets_init', 'sonia_choi_music_2017_widgets_init' );
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * Enqueue scripts and styles.

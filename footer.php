@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
-		<div class="footer-social-media">
+		<!-- <div class="footer-social-media">
 			<section>
 				<form class="" action="index.html" method="post">
 					<input type="name" name="" value="">
@@ -32,11 +32,40 @@
 					 </ul>
 				 </nav>
 			</section>
-		</div><!-- .footer-social-media -->
+		</div> -->
+		<!-- .footer-social-media -->
 
-		<div class="site-info">
-			<?php printf( esc_html__( 'Sonia Choi 2017 | Design & Build by %2$s.', 'sonia-choi-music-2017' ), 'sonia-choi-music-2017', '<a href="http://twitter.com/juliomontas" rel="designer">Julio Montas</a>' ); ?>
-		</div><!-- .site-info -->
+		<div id="footer-sidebar1">
+		  <?php
+		    if(is_active_sidebar('footer-sidebar-1')){
+		      dynamic_sidebar('footer-sidebar-1');
+		    }
+		  ?>
+		</div>
+
+		<div id="footer-sidebar2">
+		  <?php
+		    if(is_active_sidebar('footer-sidebar-2')){
+		      dynamic_sidebar('footer-sidebar-2');
+		    }
+		  ?>
+		</div>
+
+		<div id="footer-sidebar3">
+		  <?php
+		    if(is_active_sidebar('footer-sidebar-3')){
+		      dynamic_sidebar('footer-sidebar-3');
+		    }
+		  ?>
+		</div>
+
+		<div id="footer-sidebar4" class="site-info">
+		  <?php
+		    if(is_active_sidebar('footer-sidebar-4')){
+		      dynamic_sidebar('footer-sidebar-4');
+		    }
+		  ?>
+		</div>
 
 	</footer><!-- #colophon -->
 </div><!-- #page -->
