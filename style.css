@@ -81,6 +81,47 @@ video#bgvid {
 }
 
 
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# JM: Intro Page Section IN Music & Video, Contact, Blog, Gallery, Event
+--------------------------------------------------------------*/
+
+.entry-title {
+	margin-top: 120px;
+	text-align: center;
+	font-size: 36px;
+	font-weight: 100;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: -5px;
+}
+
+.p1 {
+	font-size: 16px;
+	font-weight: 100;
+	letter-spacing: 1px;
+	line-height: 26px;
+	margin-top: -10px;
+	margin-bottom: 110px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*--------------------------------------------------------------
 # JM: Blog
 --------------------------------------------------------------*/
