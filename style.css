@@ -106,8 +106,31 @@ video#bgvid {
 	font-weight: 100;
 	letter-spacing: 1px;
 	line-height: 26px;
-	margin-top: -10px;
-	margin-bottom: 110px;
+	width: 750px;
+	margin: 0 auto 85px;
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# JM: Music & Video
+--------------------------------------------------------------*/
+
+.music-column {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.video-column {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.music-column, .video-column {
+  padding: 10px;
+	width: 50%;
+	float: right;
 }
 
 
