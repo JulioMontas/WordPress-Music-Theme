@@ -11,6 +11,22 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
+
+		<div class="custom-box" style="text-align: center;">
+
+			<!-- <?php the_meta(); ?>  -->
+			<h1 class="entry-title">
+				<?php $my_title = get_post_meta( $post->ID, 'wgmdt_term_title', true ); echo $my_title; ?>
+			</h1>
+			<p class="p1">
+			  <span class="s1">
+				  <?php $my_summary = get_post_meta( $post->ID, 'wgmdt_term_summary', true ); echo $my_summary; ?>
+				</span>
+			</p>
+
+		</div>
+
+
 		<?php
 			the_content();
 
@@ -19,6 +35,7 @@
 				'after'  => '</div>',
 			) );
 		?>
+
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

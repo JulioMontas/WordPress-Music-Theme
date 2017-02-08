@@ -80,25 +80,16 @@ video#bgvid {
     }
 }
 
-
-
-
-
-
-
-
 /*--------------------------------------------------------------
 # JM: Intro Page Section IN Music & Video, Contact, Blog, Gallery, Event
 --------------------------------------------------------------*/
-
 .entry-title {
-	margin-top: 120px;
+	margin-top: 75px;
 	text-align: center;
 	font-size: 36px;
 	font-weight: 100;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	margin-bottom: -5px;
 }
 
 .p1 {
@@ -110,29 +101,101 @@ video#bgvid {
 	margin: 0 auto 85px;
 }
 
-
-
-
-
-
-
 /*--------------------------------------------------------------
 # JM: Music & Video
 --------------------------------------------------------------*/
 
-.music-column {
-  background: rgba(255, 255, 255, 0.05);
-  margin-right: 1%;
+.music-column section,
+.video-column section{
+  opacity: 0.5;
 }
-.video-column {
-  background: rgba(255, 255, 255, 0.05);
+.music-column section:hover,
+.video-column section:hover{
+  opacity: 1;
 }
 
 .music-column, .video-column {
-  padding: 10px;
-	width: 49%;
+	background: rgba(255, 255, 255, 0.05);
+	padding: 15px;
+	width: 47.5%;
 	float: left;
+	opacity: 0.85;
+	margin-right: 2.5%;
+	border-radius: 10px;
+	text-align: center;
 }
+
+.music-column > section > p > a {
+	color: #ccc;
+	text-decoration: none;
+	border: 2px solid white;
+	padding: 15px 60px;
+	font-weight: 400;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+	background: rgba(255,255,255,0.1);
+  border-radius: 5px;
+}
+
+.music-column > section > p > a:hover {
+	color: white;
+	background: rgba(255,255,255,0.0);
+}
+
+.music-column section > h5 {
+	margin-top: -20px;
+	margin-bottom: -15px;
+}
+
+.music-column section tr, .video-column section tr {
+  font-size: 0.8em;
+  letter-spacing: 1px;
+}
+
+.music-column section > table > tbody > tr > td:nth-child(1),
+.video-column section > table > tbody > tr > td:nth-child(1) {
+	text-align: left;
+  color: thistle;
+}
+
+.music-column section > table > tbody > tr > td:nth-child(2),
+.video-column section > table > tbody > tr > td:nth-child(2) {
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+
+.music-column section > table > tbody > tr > td:nth-child(3),
+.video-column section > table > tbody > tr > td:nth-child(3) {
+	text-align: right;
+}
+
+.music-column section > table > tbody > tr > td:nth-child(1),
+.video-column section > table > tbody > tr > td:nth-child(1),
+.music-column section > table > tbody > tr > td:nth-child(3),
+.video-column section > table > tbody > tr > td:nth-child(3),
+.music-column section > p  {
+	color: #ccc;
+  /*color: palegreen;*/
+  /*color: thistle;*/
+}
+
+.music-column section::after,
+.video-column section::after {
+	content: ' ';
+	/* clear: right; */
+  display: block;
+	margin: 0 auto;
+	background: white;
+	width: 25%;
+	height: 6px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	border-radius: 5px;
+}
+
+
+
 
 /*--------------------------------------------------------------
 # JM: Gallery
@@ -345,11 +408,11 @@ video#bgvid {
 	font-weight: 100;
 }
 .footer-info a{
-  color: thistle;
+  color: palegreen;
   text-decoration: none;
 }
 .footer-info a:hover{
-  color: palegreen;
+  color: thistle;
 }
 
 

@@ -560,6 +560,47 @@ echo '<div class="before-content">'. $cf .'</div>';
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Implement the Custom Meta box.
+ */
+require get_template_directory() . '/lib/example-functions.php';
+
+
+
 /**
  * Implement the Custom Header feature.
  */
