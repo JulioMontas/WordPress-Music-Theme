@@ -12,29 +12,8 @@
 ?>
 
 	</div><!-- #content -->
-
+	
 	<footer id="colophon" class="site-footer" role="contentinfo">
-
-		<!-- <div class="footer-social-media">
-			<section>
-				<form class="" action="index.html" method="post">
-					<input type="name" name="" value="">
-					<button type="button" name="button">Subscribe</button>
-				</form>
-
-				 <nav>
-					 <ul>
-						 <li><a href="#"><img src="/images/logo-1.png" alt="logo"></a></li>
-						 <li><a href="#"><img src="/images/logo-2.png" alt="logo"></a></li>
-						 <li><a href="#"><img src="/images/logo-3.png" alt="logo"></a></li>
-						 <li><a href="#"><img src="/images/logo-4.png" alt="logo"></a></li>
-	           <li><a href="#"><img src="/images/logo-5.png" alt="logo"></a></li>
-					 </ul>
-				 </nav>
-			</section>
-		</div> -->
-		<!-- .footer-social-media -->
-
 		<div id="footer-sidebar1" class="footer-shop-btn">
 		  <?php
 		    if(is_active_sidebar('footer-sidebar-1')){

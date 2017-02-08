@@ -13,33 +13,20 @@
  */
 
 /*
-	Template Name: Gallery
+	Template Name: Page With Title
 */
 
 get_header(); ?>
-
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main gallery-pagina" role="main">
+		<main id="main" class="site-main biography-pagina" role="main">
 
 			<?php
 			while ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/content', 'page' );
+				get_template_part( 'template-parts/content-page-w-title', 'page' );
 
 			endwhile; // End of the loop.
 			?>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	<script>
-	function openTap(tapName) {
-	    var i;
-	    var x = document.getElementsByClassName("tap");
-	    for (i = 0; i < x.length; i++) {
-	       x[i].style.display = "none";
-	    }
-	    document.getElementById(tapName).style.display = "block";
-	}
-	</script>
-
 <?php
 get_footer();

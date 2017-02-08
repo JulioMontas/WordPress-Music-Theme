@@ -180,7 +180,7 @@ function yourprefix_register_julio_metabox() {
 		) );
 
 		$cmb_biography_page->add_field( array(
-			'name' => esc_html__( 'Short summary', 'cmb2' ),
+			'name' => esc_html__( 'Intro Summary', 'cmb2' ),
 			'id'   => $prefix . 'textareasmall',
 			'type' => 'textarea_small',
 		) );

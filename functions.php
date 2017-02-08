@@ -84,6 +84,26 @@ function sonia_choi_music_2017_content_width() {
 }
 add_action( 'after_setup_theme', 'sonia_choi_music_2017_content_width', 0 );
 
+
+/**
+ * Enqueue scripts and styles.
+ */
+function sonia_choi_music_2017_scripts() {
+	wp_enqueue_style( 'sonia-choi-music-2017-style', get_stylesheet_uri() );
+	wp_enqueue_script( 'sonia-choi-music-2017-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'sonia-choi-music-2017-jquery-3-1-1', get_template_directory_uri() . '/js/jquery-3.1.1.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'sonia-choi-music-2017-master', get_template_directory_uri() . '/js/master.js', array(), '20151215', true );
+	wp_enqueue_script( 'sonia-choi-music-2017-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'sonia_choi_music_2017_scripts' );
+
+
+
+
 /**
  * Register widget area.
  *
@@ -149,112 +169,9 @@ function sonia_choi_music_2017_widgets_init() {
 add_action( 'widgets_init', 'sonia_choi_music_2017_widgets_init' );
 
 
-
 /**
- * Enqueue scripts and styles.
+ * Custom Footer #1,#2,#3,#4
  */
-function sonia_choi_music_2017_scripts() {
-	wp_enqueue_style( 'sonia-choi-music-2017-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'sonia-choi-music-2017-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'sonia-choi-music-2017-jquery-3-1-1', get_template_directory_uri() . '/js/jquery-3.1.1.min.js', array(), '20151215', true );
-	// wp_enqueue_script( 'sonia-choi-music-2017-three-js', get_template_directory_uri() . '/js/three.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'sonia-choi-music-2017-master', get_template_directory_uri() . '/js/master.js', array(), '20151215', true );
-	wp_enqueue_script( 'sonia-choi-music-2017-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'sonia_choi_music_2017_scripts' );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Creating the widget
-class wpb_widget extends WP_Widget {
-
-function __construct() {
-parent::__construct(
-// Base ID of your widget
-'wpb_widget',
-
-// Widget name will appear in UI
-__('WPBeginner Widget', 'wpb_widget_domain'),
-
-// Widget description
-array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain' ), )
-);
-}
-
-// Creating widget front-end
-// This is where the action happens
-public function widget( $args, $instance ) {
-$title = apply_filters( 'widget_title', $instance['title'] );
-// before and after widget arguments are defined by themes
-echo $args['before_widget'];
-if ( ! empty( $title ) )
-echo $args['before_title'] . $title . $args['after_title'];
-
-// This is where you run the code and display the output
-echo __( '', 'wpb_widget_domain' );
-echo $args['after_widget'];
-}
-
-// Widget Backend
-public function form( $instance ) {
-if ( isset( $instance[ 'title' ] ) ) {
-$title = $instance[ 'title' ];
-}
-else {
-$title = __( 'New title', 'wpb_widget_domain' );
-}
-// Widget admin form
-?>
-<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
-<input cols="80" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>"/ >
-
-<?php
-}
-
-// Updating widget replacing old instances with new
-public function update( $new_instance, $old_instance ) {
-$instance = array();
-$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-return $instance;
-}
-} // Class wpb_widget ends here
-
-// Register and load the widget
-function wpb_load_widget() {
-	register_widget( 'wpb_widget' );
-}
-add_action( 'widgets_init', 'wpb_load_widget' );
-
-
-
-
-
-
-
-
-
-
-
 
 class SocialMediaWidgetBTN extends WP_Widget {
 
@@ -425,117 +342,9 @@ function social_media_widget_button() {
 add_action( 'widgets_init', 'social_media_widget_button' );
 
 
-
-
-
-
-
-
-// // 10:30pm
-//
-// add_action( 'init', 'my_recipes' );
-// add_filter( 'post_updated_messages', 'my_recipes_messages' );
-// add_action( 'admin_head', 'my_recipes_help' );
-//
-// function my_recipes() {
-// 	$labels = array(
-// 		'name'               => 'Recipes',
-// 		'singular_name'      => 'Recipe',
-// 		'menu_name'          => 'Recipes',
-// 		'name_admin_bar'     => 'Recipe',
-// 		'add_new'            => 'Add New',
-// 		'add_new_item'       => 'Add New Recipe',
-// 		'new_item'           => 'New Recipe',
-// 		'edit_item'          => 'Edit Recipe',
-// 		'view_item'          => 'View Recipe',
-// 		'all_items'          => 'All Recipes',
-// 		'search_items'       => 'Search Recipes',
-// 		'parent_item_colon'  => 'Parent Recipes:',
-// 		'not_found'          => 'No recipes found.',
-// 		'not_found_in_trash' => 'No recipes found in Trash.'
-// 	);
-//
-// 	$args = array(
-// 		'labels'		=> $labels,
-// 		'public'		=> true,
-// 		'rewrite'		=> array( 'slug' => 'recipe' ),
-// 		'has_archive'   => true,
-// 		'menu_position' => 20,
-// 		'menu_icon'     => 'dashicons-carrot',
-// 		'taxonomies'		=> array( 'post_tag', 'category' ),
-// 		// 'supports'      => array( 'title')
-// 		 'supports'      => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'comments' )
-// 	);
-// 	register_post_type( 'my_recipe', $args );
-// }
-//
-// function my_recipes_messages( $messages ) {
-// 	$post = get_post();
-//
-// 	$messages['recipe'] = array(
-// 		0  => '',
-// 		1  => 'Recipe updated.',
-// 		2  => 'Custom field updated.',
-// 		3  => 'Custom field deleted.',
-// 		4  => 'Recipe updated.',
-// 		5  => isset( $_GET['revision'] ) ? sprintf( 'Recipe restored to revision from %s',wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-// 		6  => 'Recipe published.',
-// 		7  => 'Recipe saved.',
-// 		8  => 'Recipe submitted.',
-// 		9  => sprintf(
-// 			'Recipe scheduled for: <strong>%1$s</strong>.',
-// 			date_i18n( 'M j, Y @ G:i', strtotime( $post->post_date ) )
-// 		),
-// 		10 => 'Recipe draft updated.'
-// 	);
-//
-// 	return $messages;
-// }
-//
-// function my_recipes_help() {
-//
-// 	$screen = get_current_screen();
-//
-// 	if ( 'recipe' != $screen->post_type ) {
-// 		return;
-// 	}
-//
-// 	$basics = array(
-// 		'id'      => 'recipe_basics',
-// 		'title'   => 'Recipe Basics',
-// 		'content' => 'Content for help tab here'
-// 	);
-//
-// 	$formatting = array(
-// 		'id'      => 'recipe_formatting',
-// 		'title'   => 'Recipe Formatting',
-// 		'content' => 'Content for help tab here'
-// 	);
-//
-// 	$screen->add_help_tab( $basics );
-// 	$screen->add_help_tab( $formatting );
-//
-// }
-//
-//
-// function dwwp_add_custom_metabox() {
-// 	add_meta_box(
-// 		'dwwp_meta',
-// 		'Job Listing',
-// 		'dwwp_meta_callback',
-// 		'job'
-// 	);
-// }
-// add_action('add_meta_boxes', 'dwwp_add_custom_metabox');
-//
-//
-
-
-
-
-
-
-
+/**
+ * add_action
+ */
 
 add_action( 'loop_start', 'before_single_post_content' );
 function before_single_post_content() {
@@ -548,58 +357,10 @@ echo '<div class="before-content">'. $cf .'</div>';
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
  * Implement the Custom Meta box.
  */
-require get_template_directory() . '/lib/example-functions.php';
-
-
+require get_template_directory() . '/lib/cmb2-metaboxes-functions.php';
 
 /**
  * Implement the Custom Header feature.
