@@ -102,8 +102,6 @@ function yourprefix_before_row_if_2( $field_args, $field ) {
 	}
 }
 
-
-
 add_action( 'cmb2_admin_init', 'yourprefix_register_julio_metabox' );
 /**
  * Hook in and add a demo metabox. Can only happen on the 'cmb2_admin_init' or 'cmb2_init' hook.
@@ -126,7 +124,6 @@ function yourprefix_register_julio_metabox() {
 			 // 'cmb_styles' => false, // false to disable the CMB stylesheet
 			 'closed'     => true, // Keep the metabox closed by default
 	 ) );
-
 
 	 // Regular text field
 	 $cmb_header_text->add_field( array(
@@ -155,15 +152,10 @@ function yourprefix_register_julio_metabox() {
 	) );
 
 
-
-
-
-
-
 	add_action( 'cmb2_init', 'yourprefix_register_biography_page' );
 	/**
-	 * Hook in and add a box to be available in the CMB2 REST API. Can only happen on the 'cmb2_init' hook.
-	 * More info: https://github.com/WebDevStudios/CMB2/wiki/REST-API
+	 * Text Text
+	 * More info:
 	 */
 	function yourprefix_register_biography_page() {
 		$prefix = 'wgmdt_term_biography';
@@ -176,7 +168,7 @@ function yourprefix_register_julio_metabox() {
 			'priority'      => 'high',
 			'show_names'    => true, // Show field names on the left
 			// 'cmb_styles' => false, // false to disable the CMB stylesheet
-			// 'closed'     => true, // Keep the metabox closed by default
+			 'closed'     => true, // Keep the metabox closed by default
 		) );
 
 		$cmb_biography_page->add_field( array(
@@ -213,13 +205,5 @@ function yourprefix_register_julio_metabox() {
     'type'    => 'wysiwyg',
     'options' => array(),
 		) );
-
-
-
-
 	}
-
-
-
-
 }

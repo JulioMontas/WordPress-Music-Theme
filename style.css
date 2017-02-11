@@ -53,6 +53,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # JM: FullScreen Background Video
 --------------------------------------------------------------*/
 
+li{
+  list-style: none;
+}
+
 video#bgvid {
     position: fixed;
     top: 50%;
@@ -100,6 +104,198 @@ video#bgvid {
 	width: 750px;
 	margin: 0 auto 85px;
 }
+
+
+
+/*--------------------------------------------------------------
+# Landing Page: Intro
+--------------------------------------------------------------*/
+.landing-pagina{
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-pagina .intro{
+  display: flex;
+  flex-direction: row;
+	height: 100vh;
+
+}
+.landing-pagina .intro section:nth-child(1) img {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+}
+.landing-pagina .intro section:last-child div {
+   width: 100%;
+   text-align: center;
+   margin-top: 25%;
+}
+.landing-pagina .intro section:last-child h2 {
+	font-size: 1em;
+	font-weight: 100;
+	letter-spacing: 0.1em;
+	margin-top: 0px;
+}
+.intro section:nth-child(2) div a{
+	margin-top: 15%;
+	color: red;
+	position: absolute;
+}
+
+.landing-pagina .intro section:first-child {width: 25%;}
+.landing-pagina .intro section:last-child {width: 75%;}
+
+/*--------------------------------------------------------------
+# Landing Page: Lastest Song
+--------------------------------------------------------------*/
+
+.landing-pagina .latest-song{
+  background: linear-gradient(270deg, #25EE8D, #61E5FF);
+  background-size: 400% 400%;
+  height: 100vh;
+  margin-top: -32px;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+   0%{background-position:0% 50%}
+   50%{background-position:100% 50%}
+   100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+   0%{background-position:0% 50%}
+   50%{background-position:100% 50%}
+   100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+   0%{background-position:0% 50%}
+   50%{background-position:100% 50%}
+   100%{background-position:0% 50%}
+}
+
+
+.landing-pagina .latest-song section{
+  background: red;
+  display: flex;
+}
+
+/* Nav Demo Styles -------------------- */
+main-nav,
+.drop-nav {
+  background: #2c3e50;
+}
+
+main-nav,
+.drop-nav {
+  background: #2c3e50;
+}
+.main-nav {
+  float: left;
+  border-radius: 4px;
+  margin-top: 8px;
+  border: solid 1px #1e2a36;
+}
+
+  .main-nav > li {
+    float: left;
+    border-left: solid 1px #1e2a36;
+  }
+  .main-nav li:first-child {
+    border-left: none;
+  }
+  .main-nav a {
+    color: #fff;
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+  }
+
+.dropdown{
+  position: relative;
+}
+
+.drop-nav {
+  position: absolute;
+  display: none;
+}
+
+.drop-nav li {
+  border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+.dropdown:hover > .drop-nav {
+  display: block;
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Landing Page: Artist
+--------------------------------------------------------------*/
+
+.landing-pagina .artist{
+  height: 100vh;
+  background: rgba(255, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+
+}
+.landing-pagina .artist section:first-child {width: 50%;   background: red;}
+.landing-pagina .artist section:last-child {width: 50%;   background: yellow;}
+
+
+/*--------------------------------------------------------------
+# Landing Page: Gallery
+--------------------------------------------------------------*/
+.landing-pagina .gallery{
+  background: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # JM: Music & Video
