@@ -174,58 +174,52 @@ video#bgvid {
    50%{background-position:100% 50%}
    100%{background-position:0% 50%}
 }
-
-
 .landing-pagina .latest-song section{
-  background: red;
   display: flex;
+  justify-content: center;
+  margin-top: 27%;
 }
 
 /* Nav Demo Styles -------------------- */
-main-nav,
-.drop-nav {
+.landing-pagina .latest-song section main-nav,
+.landing-pagina .latest-song section .drop-nav {
   background: #2c3e50;
 }
-
-main-nav,
-.drop-nav {
-  background: #2c3e50;
-}
-.main-nav {
+.landing-pagina .latest-song section .main-nav {
   float: left;
   border-radius: 4px;
   margin-top: 8px;
   border: solid 1px #1e2a36;
 }
 
-  .main-nav > li {
-    float: left;
-    border-left: solid 1px #1e2a36;
-  }
-  .main-nav li:first-child {
-    border-left: none;
-  }
-  .main-nav a {
-    color: #fff;
-    display: block;
-    padding: 10px 30px;
-    text-decoration: none;
-  }
+.landing-pagina .latest-song section .main-nav > li {
+  float: left;
+  border-left: solid 1px #1e2a36;
+}
+.landing-pagina .latest-song section .main-nav li:first-child {
+  border-left: none;
+}
+.landing-pagina .latest-song section .main-nav a {
+  color: #fff;
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+}
 
-.dropdown{
+.landing-pagina .latest-song section .dropdown{
   position: relative;
 }
 
-.drop-nav {
+.landing-pagina .latest-song section .drop-nav {
   position: absolute;
   display: none;
 }
 
-.drop-nav li {
+.landing-pagina .latest-song section .drop-nav li {
   border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
-.dropdown:hover > .drop-nav {
+.landing-pagina .latest-song section .dropdown:hover > .drop-nav {
   display: block;
 }
 
@@ -240,13 +234,48 @@ main-nav,
 
 .landing-pagina .artist{
   height: 100vh;
-  background: rgba(255, 0, 0, 0.5);
   display: flex;
   flex-direction: row;
+  text-align: center;
 
 }
-.landing-pagina .artist section:first-child {width: 50%;   background: red;}
-.landing-pagina .artist section:last-child {width: 50%;   background: yellow;}
+.landing-pagina .artist section:first-child {width: 50%;}
+.landing-pagina .artist section:last-child {width: 50%;}
+
+
+
+.landing-pagina .artist section:first-child div {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40%;
+}
+.landing-pagina .artist section:first-child div p {
+  font-size: 1em;
+  margin-bottom: 40px;
+}
+.landing-pagina .artist section:first-child div a {
+  border: 2px solid white;
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  border-radius: 5px;
+}
+.landing-pagina .artist section:first-child div a:hover,
+.landing-pagina .artist section:first-child div a:active {
+  background: rgba(255, 255, 255, 0.0);
+}
+
+.landing-pagina .artist section:nth-child(2) div {
+	margin-top: 25%;
+}
+
+
+
+
+
 
 
 /*--------------------------------------------------------------

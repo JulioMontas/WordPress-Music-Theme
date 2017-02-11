@@ -18,6 +18,7 @@
 
 get_header(); ?>
 	<div id="primary" class="content-area">
+
 		<div class="landing-pagina">
 			<div class="intro">
 				<section>
@@ -56,25 +57,30 @@ get_header(); ?>
 
 			<div class="artist">
 				<section>
-					<p><?php the_field('summary'); ?></p>
-					<a href="#"></a>
+					<div>
+					  <p><?php the_field('summary'); ?></p>
+					  <a href="#">Read More</a>
+				  </div>
 				</section>
-				<section>
-					<?php
-		      $images = get_field('image_slide');
 
-		      if( $images ): ?>
-		          <div id="slider" class="flexslider">
-		              <ul class="slides">
-		                  <?php foreach( $images as $image ): ?>
-		                      <li>
-		                          <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-		                          <p><?php echo $image['caption']; ?></p>
-		                      </li>
-		                  <?php endforeach; ?>
-		              </ul>
-		          </div>
-		      <?php endif; ?>
+				<section>
+					<div>
+  					<?php
+  		      $images = get_field('image_slide');
+
+  		      if( $images ): ?>
+  		          <div class="slider">
+  		              <ul>
+  		                  <?php foreach( $images as $image ): ?>
+  		                      <li>
+  		                          <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+  		                          <p><?php echo $image['caption']; ?></p>
+  		                      </li>
+  		                  <?php endforeach; ?>
+  		              </ul>
+  		          </div>
+  		      <?php endif; ?>
+				  </div>
 				</section>
 			</div>
 
