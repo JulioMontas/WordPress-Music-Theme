@@ -281,9 +281,29 @@ video#bgvid {
 /*--------------------------------------------------------------
 # Landing Page: Gallery
 --------------------------------------------------------------*/
-.landing-pagina .gallery{
-  background: yellow;
+.landing-pagina .gallery .flexslider ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: -40px;
+	text-align: center;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
 }
+.landing-pagina .gallery .flexslider ul li{
+  width: 23.5%;
+  opacity: 0.4;
+}
+.landing-pagina .gallery .flexslider ul li:hover{
+  opacity: 1;
+}
+
+.landing-pagina .gallery .flexslider ul li p {
+	margin-top: -12%;
+}
+
+
 
 
 
