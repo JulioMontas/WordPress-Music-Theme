@@ -59,7 +59,7 @@ get_header(); ?>
 				<section>
 					<div>
 					  <p><?php the_field('summary'); ?></p>
-					  <a href="#">Read More</a>
+					  <a href="<?php the_field('artist_cta'); ?>">Read More</a>
 				  </div>
 				</section>
 
@@ -98,9 +98,20 @@ get_header(); ?>
 	      					</li>
 	      			<?php endforeach; ?>
 	      	</ul>
+					<div class="cta-fullWidth">
+						<a href="<?php the_field('gallery_cta'); ?>">Gallery</a>
+					</div>
+
 	      </div>
 	      <?php endif; ?>
 			</div>
+
+
+			<div class="">
+
+			</div>
+
+
 
 		</div>
 		<main id="main" class="site-main" role="main">

@@ -13,24 +13,82 @@
  */
 
 /*
-	Template Name: Biography Page
+	Template Name: Biography
 */
 
 get_header(); ?>
-
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-			<?php the_meta(); ?>
 
+		<div class="pagina-biography">
+			
+			<div class="intro">
+				<section>
+					<span>
+						<?php the_field('intro_summary'); ?>
+					</span>
+				</section>
+			</div>
+
+			<div class="artist-image">
+				<section>
+					<div>
+						<?php
+						$images = get_field('artist_image');
+
+						if( $images ): ?>
+								<div class="slider">
+										<ul>
+												<?php foreach( $images as $image ): ?>
+														<li>
+																<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+																<p><?php echo $image['caption']; ?></p>
+														</li>
+												<?php endforeach; ?>
+										</ul>
+								</div>
+						<?php endif; ?>
+					</div>
+				</section>
+			</div>
+
+			<div class="full-summary">
+				<section>
+					<span>
+						<p><?php the_field('full_summary'); ?></p>
+					</span>
+				</section>
+			</div>
+
+			<div class="songs-credits">
+				<section>
+					<h3>Songs Credits</h3>
+				</section>
+				<section>
+					<?php the_field('songs_credits'); ?>
+				</section>
+			</div>
+
+			<div class="awards">
+				<section>
+					<h3>Awards</h3>
+				</section>
+				<section>
+					<?php the_field('awards'); ?>
+				</section>
+			</div>
+
+
+		</div>
+
+
+		<main id="main" class="site-main" role="main">
 			<?php
 			while ( have_posts() ) : the_post();
 				get_template_part( 'template-parts/content-page-no-title', 'page' );
 
 			endwhile; // End of the loop.
 			?>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
 get_footer();

@@ -47,7 +47,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 
-/* ---- My Style ---- */
+/* ---- Global ---- */
+
+/*--------------------------------------------------------------
+
+
+
+/*--------------------------------------------------------------
+# JM: Glogal CTA
+--------------------------------------------------------------*/
+
+.cta-fullWidth {
+	text-align: center;
+	padding: 3em 0;
+}
 
 /*--------------------------------------------------------------
 # JM: FullScreen Background Video
@@ -224,10 +237,6 @@ video#bgvid {
 }
 
 
-
-
-
-
 /*--------------------------------------------------------------
 # Landing Page: Artist
 --------------------------------------------------------------*/
@@ -253,7 +262,8 @@ video#bgvid {
   font-size: 1em;
   margin-bottom: 40px;
 }
-.landing-pagina .artist section:first-child div a {
+.landing-pagina .artist section:first-child div a,
+.landing-pagina .gallery div a {
   border: 2px solid white;
   padding: 20px 50px;
   background: rgba(255, 255, 255, 0.2);
@@ -264,18 +274,15 @@ video#bgvid {
   border-radius: 5px;
 }
 .landing-pagina .artist section:first-child div a:hover,
-.landing-pagina .artist section:first-child div a:active {
+.landing-pagina .artist section:first-child div a:active,
+.landing-pagina .gallery div a:hover,
+.landing-pagina .gallery div a:active {
   background: rgba(255, 255, 255, 0.0);
 }
 
 .landing-pagina .artist section:nth-child(2) div {
 	margin-top: 25%;
 }
-
-
-
-
-
 
 
 /*--------------------------------------------------------------
@@ -304,6 +311,14 @@ video#bgvid {
 }
 
 
+
+/*--------------------------------------------------------------
+# Biography.php: Global
+--------------------------------------------------------------*/
+
+.pagina-biography {
+	margin-top: 130px;
+}
 
 
 
