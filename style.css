@@ -305,12 +305,9 @@ video#bgvid {
 .landing-pagina .gallery .flexslider ul li:hover{
   opacity: 1;
 }
-
 .landing-pagina .gallery .flexslider ul li p {
 	margin-top: -12%;
 }
-
-
 
 /*--------------------------------------------------------------
 # Biography.php: Global
@@ -327,11 +324,9 @@ video#bgvid {
 	line-height: 1.5em;
 }
 
-
 .pagina-biography .artist-image section div ul li img {
 	border: 8px solid white;
 }
-
 
 .pagina-biography .full-summary section{
 	width: 900px;
@@ -361,14 +356,33 @@ video#bgvid {
 .pagina-biography .awards section:nth-child(2){
 	background: rgba(255, 255, 255, 0.2);
 }
+
 .pagina-biography .songs-credits section:nth-child(2),
 .pagina-biography .awards section:nth-child(1){
 	background: rgba(255, 255, 255, 0.3);
 }
 
 
+/*--------------------------------------------------------------
+# Blog.php: Global
+--------------------------------------------------------------*/
 
+/*.site-content{
+  display: flex;
+}*/
 
+.blog-page {
+	display: flex;
+	flex-direction: row;
+}
+
+.widget-area {
+	width: 450px;
+}
+
+#recentcomments {
+    margin-left: -40px;
+}
 
 
 
@@ -1546,7 +1560,7 @@ a:active {
 /* Desktop 1920px */
 @media screen and (min-width: 120em) {
 	.site-main{
-		max-width: 85em;
+		max-width: 100em;
 	}
 }
 

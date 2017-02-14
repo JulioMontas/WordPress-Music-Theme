@@ -28,7 +28,6 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		 <?php the_meta(); ?>
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */

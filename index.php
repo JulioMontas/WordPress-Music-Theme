@@ -15,8 +15,9 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+		<main id="main" class="site-main blog-page" role="main">
+			<div class="">
+	
 		<?php
 		if ( have_posts() ) :
 
@@ -47,10 +48,11 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-
+			</div>
+<?php get_sidebar(); ?>
 		</main><!-- #main -->
+
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
