@@ -20,11 +20,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 
 		<div class="pagina-biography">
-			
+
 			<div class="intro">
 				<section>
 					<span>
-						<?php the_field('intro_summary'); ?>
+						<p><?php the_field('intro_summary'); ?></p>
 					</span>
 				</section>
 			</div>
@@ -70,10 +70,10 @@ get_header(); ?>
 
 			<div class="awards">
 				<section>
-					<h3>Awards</h3>
+					<?php the_field('awards'); ?>
 				</section>
 				<section>
-					<?php the_field('awards'); ?>
+					<h3>Awards</h3>
 				</section>
 			</div>
 

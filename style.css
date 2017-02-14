@@ -316,10 +316,55 @@ video#bgvid {
 # Biography.php: Global
 --------------------------------------------------------------*/
 
-.pagina-biography {
+.pagina-biography .intro {
+	width: 1000px;
+	text-align: center;
+	margin: 0 auto;
 	margin-top: 130px;
+	margin-bottom: 70px;
+	font-size: 1.7em;
+	font-weight: 100;
+	line-height: 1.5em;
 }
 
+
+.pagina-biography .artist-image section div ul li img {
+	border: 8px solid white;
+}
+
+
+.pagina-biography .full-summary section{
+	width: 900px;
+	margin: 0 auto;
+	font-weight: 100;
+}
+.pagina-biography .full-summary section span p:nth-child(2) {
+	font-weight: 400;
+	font-size: 1.5em;
+	line-height: 1.3em;
+}
+
+.pagina-biography .songs-credits,
+.pagina-biography .awards{
+	display: flex;
+}
+
+.pagina-biography .songs-credits section:nth-child(1),
+.pagina-biography .songs-credits section:nth-child(2),
+.pagina-biography .awards section:nth-child(1),
+.pagina-biography .awards section:nth-child(2){
+	width: 50%;
+	height: 70vh;
+}
+
+.pagina-biography .songs-credits section:nth-child(1),
+.pagina-biography .awards section:nth-child(2){
+	background: rgba(255, 255, 255, 0.2);
+}
+.pagina-biography .songs-credits section:nth-child(2),
+.pagina-biography .awards section:nth-child(1){
+	background: rgba(255, 255, 255, 0.3);
+}
 
 
 
