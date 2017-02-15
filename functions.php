@@ -362,7 +362,7 @@ echo '<div class="before-content">'. $cf .'</div>';
 /**
  * Implement the Custom Meta box.
  */
- // require get_template_directory() . '/lib/cmb2-metaboxes-functions.php';
+require get_template_directory() . '/lib/cmb2-metaboxes-functions.php';
 
 /**
  * Implement the Custom Header feature.

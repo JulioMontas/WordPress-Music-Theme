@@ -152,58 +152,63 @@ function yourprefix_register_julio_metabox() {
 	) );
 
 
-	add_action( 'cmb2_init', 'yourprefix_register_biography_page' );
-	/**
-	 * Text Text
-	 * More info:
-	 */
-	function yourprefix_register_biography_page() {
-		$prefix = 'wgmdt_term_biography';
 
-		$cmb_biography_page = new_cmb2_box( array(
-			'id'            => $prefix . 'biography_page_metabox',
-			'title'         => __( 'Biography Page', 'cmb2' ),
-			'object_types'  => array( 'page', ), // Post type
-			'context'       => 'normal',
-			'priority'      => 'high',
-			'show_names'    => true, // Show field names on the left
-			// 'cmb_styles' => false, // false to disable the CMB stylesheet
-			 'closed'     => true, // Keep the metabox closed by default
-		) );
 
-		$cmb_biography_page->add_field( array(
-			'name' => esc_html__( 'Intro Summary', 'cmb2' ),
-			'id'   => $prefix . 'textareasmall',
-			'type' => 'textarea_small',
-		) );
+	// add_action( 'cmb2_init', 'yourprefix_register_biography_page' );
+	// /**
+	//  * Text Text
+	//  * More info:
+	//  */
+	// function yourprefix_register_biography_page() {
+	// 	$prefix = 'wgmdt_term_biography';
+	//
+	// 	$cmb_biography_page = new_cmb2_box( array(
+	// 		'id'            => $prefix . 'biography_page_metabox',
+	// 		'title'         => __( 'Biography Page', 'cmb2' ),
+	// 		'object_types'  => array( 'page', ), // Post type
+	// 		'context'       => 'normal',
+	// 		'priority'      => 'high',
+	// 		'show_names'    => true, // Show field names on the left
+	// 		// 'cmb_styles' => false, // false to disable the CMB stylesheet
+	// 		 'closed'     => true, // Keep the metabox closed by default
+	// 	) );
+	//
+	// 	$cmb_biography_page->add_field( array(
+	// 		'name' => esc_html__( 'Intro Summary', 'cmb2' ),
+	// 		'id'   => $prefix . 'textareasmall',
+	// 		'type' => 'textarea_small',
+	// 	) );
+	//
+	// 	$cmb_biography_page->add_field( array(
+	// 		'name' => esc_html__( 'Artist Image', 'cmb2' ),
+	// 		'desc' => esc_html__( 'Upload an image or enter a URL.', 'cmb2' ),
+	// 		'id'   => $prefix . 'image',
+	// 		'type' => 'file',
+	// 	) );
+	//
+	// 	$cmb_biography_page->add_field( array(
+	// 		'name' => esc_html__( 'Full summary', 'cmb2' ),
+	// 		'id'   => $prefix . 'textarea',
+	// 		'type' => 'textarea',
+	// 	) );
+	//
+	// 	$cmb_biography_page->add_field( array(
+  //   'name'    => 'Songs Credits',
+  //   'desc'    => 'field description (optional)',
+  //   'id'      => 'songs_credits_wysiwyg',
+  //   'type'    => 'wysiwyg',
+  //   'options' => array(),
+	// 	) );
+	//
+	// 	$cmb_biography_page->add_field( array(
+  //   'name'    => 'Awards',
+  //   'desc'    => 'field description (optional)',
+  //   'id'      => 'awards_wysiwyg',
+  //   'type'    => 'wysiwyg',
+  //   'options' => array(),
+	// 	) );
+	// }
 
-		$cmb_biography_page->add_field( array(
-			'name' => esc_html__( 'Artist Image', 'cmb2' ),
-			'desc' => esc_html__( 'Upload an image or enter a URL.', 'cmb2' ),
-			'id'   => $prefix . 'image',
-			'type' => 'file',
-		) );
 
-		$cmb_biography_page->add_field( array(
-			'name' => esc_html__( 'Full summary', 'cmb2' ),
-			'id'   => $prefix . 'textarea',
-			'type' => 'textarea',
-		) );
 
-		$cmb_biography_page->add_field( array(
-    'name'    => 'Songs Credits',
-    'desc'    => 'field description (optional)',
-    'id'      => 'songs_credits_wysiwyg',
-    'type'    => 'wysiwyg',
-    'options' => array(),
-		) );
-
-		$cmb_biography_page->add_field( array(
-    'name'    => 'Awards',
-    'desc'    => 'field description (optional)',
-    'id'      => 'awards_wysiwyg',
-    'type'    => 'wysiwyg',
-    'options' => array(),
-		) );
-	}
 }
