@@ -367,10 +367,6 @@ video#bgvid {
 # Blog.php: Global
 --------------------------------------------------------------*/
 
-/*.site-content{
-  display: flex;
-}*/
-
 .blog-page {
 	display: flex;
 	flex-direction: row;
@@ -384,6 +380,40 @@ video#bgvid {
     margin-left: -40px;
 }
 
+
+/*--------------------------------------------------------------
+# page_event.php: Global
+--------------------------------------------------------------*/
+
+.pagina-event > table {
+	margin-top: -30px;
+}
+
+.pagina-event table tbody tr{
+	font-weight: 100;
+	font-size: 0.9em;
+	letter-spacing: 0.1em;
+	color: darkgray;
+}
+.pagina-event table tbody tr:hover{
+	color: white;
+}
+
+.pagina-event table tbody tr td:nth-child(3){
+	/*color: white;*/
+	font-weight: 600;
+	text-align: center;
+}
+.pagina-event table tbody tr td:nth-child(3) a{
+	color: darkgray;
+	text-decoration: none;
+}
+.pagina-event table tbody tr td:nth-child(3) a:hover{
+	color: white;
+}
+.pagina-event table tbody tr td:nth-child(4){
+	text-align: right;
+}
 
 
 
@@ -1556,9 +1586,9 @@ a:active {
 		margin: 1.8em auto;
 	}
 
-	#main > div:nth-child(1){
+	/*#main > div:nth-child(1){
 		max-width: 53em;
-	}
+	}*/
 
 }
 

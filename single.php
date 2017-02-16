@@ -27,6 +27,36 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
+		<div class='event-excerpt'>
+		<section class="">
+			<p>
+			<?php if( get_field( "location" ) ): ?>
+					<strong>Location: </strong><?php the_field( "location" ); ?>
+			 <?php endif; ?>
+
+			<?php if( get_field( "time_start" ) ): ?>
+					<strong>Time Start: </strong><?php the_field( "time_start" ); ?>
+			<?php endif; ?>
+
+			<?php if( get_field( "time_end" ) ): ?>
+					 <strong>Time End: </strong><?php the_field( "time_end" ); ?>
+			<?php endif; ?>
+			</p>
+
+			<?php if( get_field( "artist" ) ): ?>
+					<p>Speaker(s): <?php the_field( "artist" ); ?></p>
+			<?php endif; ?>
+
+			<?php if( get_field( "topic" ) ): ?>
+					<p>Topic(s): <?php the_field( "topic" ); ?></p>
+			<?php endif; ?>
+
+			<?php if( get_field( "invite" ) ): ?>
+					<p><a href="<?php the_field( 'invite' ); ?>" class="button"><i class="icon-file-pdf"></i> Invite</a></p>
+			<?php endif; ?>
+
+		</section>
+		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
