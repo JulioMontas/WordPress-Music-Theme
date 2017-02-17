@@ -44,7 +44,7 @@ get_header(); ?>
         <tr>
           <td><?php the_field( "month_day" ); ?></td>
           <td><?php the_field( "day" ); ?></td>
-					<td><a href="#"><?php the_title(); ?></a></td>
+					<td><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
 					<td><?php the_field( "state_and_city" ); ?></td>
         </tr>
 			<?php

@@ -107,12 +107,91 @@ get_header(); ?>
 			</div>
 
 
-			<div class="">
+			<div class="event">
+				<div class="pagina-event">
+				<?php
+				while ( have_posts() ) : the_post();
+					get_template_part( 'template-parts/content-page-w-title', 'page' );
+				endwhile; // End of the loop.
+				?>
 
+				<?php
+				$args = array(
+				'post_type'      => 'event',
+				'orderby'        => 'date',
+				'order'          => 'ASC',
+				'posts_per_page' => 5
+				);
+
+				// The Query
+				$the_query = new WP_Query( $args );
+
+				// The Loop
+				echo "<table>";
+				while ( $the_query->have_posts() ) : $the_query->the_post();
+				?>
+	        <tr>
+	          <td><?php the_field( "month_day" ); ?></td>
+	          <td><?php the_field( "day" ); ?></td>
+						<td><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
+						<td><?php the_field( "state_and_city" ); ?></td>
+	        </tr>
+				<?php
+				endwhile;
+				echo "</table>";
+
+				// Reset Post Data
+				wp_reset_postdata();
+				?>
+				</div>
+				<a href="#"></a>
+			</div>
+
+
+			<div class="contact-form">
+				<div class="">
+					<?php the_field( "contact_info" ); ?>
+				</div>
 			</div>
 
 
 
+
+
+			<div class="blog">
+				<div class="">
+				<?php
+				while ( have_posts() ) : the_post();
+					get_template_part( 'template-parts/content-page-w-title', 'page' );
+				endwhile; // End of the loop.
+				?>
+
+				<?php
+				$args = array(
+				'post_type'      => 'post',
+				'orderby'        => 'menu_order',
+				'order'          => 'ASC',
+				'posts_per_page' => 2
+				);
+
+				// The Query
+				$the_query = new WP_Query( $args );
+
+				// The Loop
+				echo "<div>";
+				while ( $the_query->have_posts() ) : $the_query->the_post();
+				?>
+				<li><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_title(); ?></a></li>
+				<?php
+				endwhile;
+				echo "</div>";
+
+				// Reset Post Data
+				wp_reset_postdata();
+				?>
+				</div>
+				<a href="#"></a>
+			</div>
 		</div>
 		<main id="main" class="site-main" role="main">
 			<?php
