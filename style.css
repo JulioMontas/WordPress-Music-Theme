@@ -263,7 +263,8 @@ video#bgvid {
   margin-bottom: 40px;
 }
 .landing-pagina .artist section:first-child div a,
-.landing-pagina .gallery div a {
+.landing-pagina .gallery div a,
+.landing-pagina .event > div:nth-child(2) > a:nth-child(1) {
   border: 2px solid white;
   padding: 20px 50px;
   background: rgba(255, 255, 255, 0.2);
@@ -276,7 +277,9 @@ video#bgvid {
 .landing-pagina .artist section:first-child div a:hover,
 .landing-pagina .artist section:first-child div a:active,
 .landing-pagina .gallery div a:hover,
-.landing-pagina .gallery div a:active {
+.landing-pagina .gallery div a:active,
+.landing-pagina .event > div:nth-child(2) > a:nth-child(1):hover,
+.landing-pagina .event > div:nth-child(2) > a:nth-child(1):active {
   background: rgba(255, 255, 255, 0.0);
 }
 
@@ -308,6 +311,118 @@ video#bgvid {
 .landing-pagina .gallery .flexslider ul li p {
 	margin-top: -12%;
 }
+
+/*--------------------------------------------------------------
+# Landing Page: Event
+--------------------------------------------------------------*/
+.landing-pagina .event{
+	height: 80vh;
+	text-align: center;
+}
+.landing-pagina .event .pagina-event {
+	width: 80em;
+	margin: 0 auto;
+	margin-top: 20%;
+}
+
+.landing-pagina .event .pagina-event > article {display: none;}
+.landing-pagina .event > div:nth-child(2){margin-top: 10%;}
+
+/*--------------------------------------------------------------
+# Landing Page: Contact
+--------------------------------------------------------------*/
+
+.landing-pagina .contact{
+	background: #f8f8f8;
+	padding: 2em 0 3em;
+}
+
+.landing-pagina .contact div{
+	width: 70em;
+	margin: 0 auto;
+}
+
+.contact > div:nth-child(1) > p:nth-child(2) {
+	text-align: center;
+	font-weight: bold;
+	color: black;
+}
+
+#wpcf7-f1799-o1 > form:nth-child(2) > p:nth-child(2),
+#wpcf7-f1799-o1 > form:nth-child(2) > p:nth-child(3),
+#wpcf7-f1799-o1 > form:nth-child(2) > p:nth-child(4){
+	float:left;
+}
+
+#wpcf7-f1799-o1 > form:nth-child(2) > p:nth-child(2),
+#wpcf7-f1799-o1 > form:nth-child(2) > p:nth-child(3){
+	width: 37.5%;
+}
+
+#wpcf7-f1799-o1 > form:nth-child(2) > p:nth-child(4){
+	width: 25%;
+}
+
+#wpcf7-f1799-o1 > form:nth-child(2) > p:nth-child(2) input,
+#wpcf7-f1799-o1 > form:nth-child(2) > p:nth-child(3) input{
+	width: 95%;
+}
+
+#wpcf7-f1799-o1 > form:nth-child(2) > p:nth-child(2) input,
+#wpcf7-f1799-o1 > form:nth-child(2) > p:nth-child(3) input,
+textarea.wpcf7-form-control,
+select.wpcf7-form-control{
+	background: white;
+	padding: 10px;
+	color: #aaaaaa;
+	border: 2px solid #7f7f7f;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+	float: right;
+	padding: 15px 93px;
+	font-size: 16px;
+	background: white;
+	color: black;
+}
+.wpcf7-form-control.wpcf7-submit:hover{
+	background: none;
+}
+
+select {
+  background: transparent;
+	background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+	height: 45px;
+	margin: 50px;
+  font-size: 16px;
+	border-radius: 3px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/* CAUTION: IE hackery ahead */
+select::-ms-expand {
+    display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+
+/*--------------------------------------------------------------
+# Contact.php
+--------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*  Copyright (c) 2016 Copyright Holder All Rights Reserved.  */
 
 /*--------------------------------------------------------------
 # Biography.php: Global

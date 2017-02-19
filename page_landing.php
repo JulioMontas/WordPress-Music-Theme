@@ -18,7 +18,6 @@
 
 get_header(); ?>
 	<div id="primary" class="content-area">
-
 		<div class="landing-pagina">
 			<div class="intro">
 				<section>
@@ -35,7 +34,6 @@ get_header(); ?>
 
 			<div class="latest-song" id="latest-song">
 				<section>
-
 					<ul class="main-nav">
 			      <li class="dropdown">
 			        <a href="#">Download</a>
@@ -50,10 +48,8 @@ get_header(); ?>
 			        </ul>
 			      </li>
 			    </ul>
-
 				</section>
 			</div>
-
 
 			<div class="artist">
 				<section>
@@ -106,7 +102,6 @@ get_header(); ?>
 	      <?php endif; ?>
 			</div>
 
-
 			<div class="event">
 				<div class="pagina-event">
 				<?php
@@ -144,19 +139,17 @@ get_header(); ?>
 				wp_reset_postdata();
 				?>
 				</div>
-				<a href="#"></a>
-			</div>
-
-
-			<div class="contact-form">
-				<div class="">
-					<?php the_field( "contact_info" ); ?>
+				<div>
+				  <a href="<?php the_field( "event_cta_url" ); ?>"><?php the_field( "event_cta_text" ); ?></a>
 				</div>
 			</div>
 
-
-
-
+			<div class="contact">
+				<div class="">
+					<p><?php the_field( "contact_summary" ); ?></p>
+					<?php the_field( "contact_info" ); ?>
+				</div>
+			</div>
 
 			<div class="blog">
 				<div class="">
