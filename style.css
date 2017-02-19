@@ -340,9 +340,9 @@ video#bgvid {
 /*--------------------------------------------------------------
 # Landing Page: Contact & Contact.php
 --------------------------------------------------------------*/
-.landing-pagina .contact{
+.landing-pagina .contact {
 	background: #f8f8f8;
-	padding: 2em 0 3em;
+	padding: 4em 0 5em;
 }
 
 .landing-pagina .contact div{
@@ -354,6 +354,9 @@ video#bgvid {
 	text-align: center;
 	font-weight: bold;
 	color: black;
+	width: 600px;
+	margin: 0 auto;
+	margin-bottom: 2.5em;
 }
 
 .landing-pagina .contact form > div:nth-child(2) input,
