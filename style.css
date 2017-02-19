@@ -49,7 +49,27 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 /* ---- Global ---- */
 
-/*--------------------------------------------------------------
+.cta-black-line,
+.cta-white-line {
+  color: white;
+  padding: 20px 65px;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  border-radius: 5px;
+}
+
+.cta-black-line {
+  border: 2px solid black;
+}
+
+.cta-white-line{
+  border: 2px solid white;
+}
+
+/*.cta-transparent{
+  background: rgba(255, 255, 255, 0.0);
+}*/
 
 
 /*--------------------------------------------------------------
@@ -250,23 +270,6 @@ video#bgvid {
   font-size: 1em;
   margin-bottom: 40px;
 }
-.landing-pagina .artist section:first-child div a,
-.landing-pagina .event > div:nth-child(2) > a:nth-child(1) {
-  border: 2px solid white;
-  padding: 20px 50px;
-  background: rgba(255, 255, 255, 0.2);
-  text-decoration: none;
-  color: white;
-  font-size: 0.8em;
-  letter-spacing: 0.1em;
-  border-radius: 5px;
-}
-.landing-pagina .artist section:first-child div a:hover,
-.landing-pagina .artist section:first-child div a:active,
-.landing-pagina .event > div:nth-child(2) > a:nth-child(1):hover,
-.landing-pagina .event > div:nth-child(2) > a:nth-child(1):active {
-  background: rgba(255, 255, 255, 0.0);
-}
 
 .landing-pagina .artist section:nth-child(2) div {
 	margin-top: 25%;
@@ -309,16 +312,6 @@ video#bgvid {
 	margin-top: -12%;
 }
 
-.landing-pagina .gallery div a {
-  border: 2px solid black;
-  padding: 20px 50px;
-  background: rgba(255, 255, 255, 0.2);
-  text-decoration: none;
-  color: black;
-  font-size: 0.8em;
-  letter-spacing: 0.1em;
-  border-radius: 5px;
-}
 
 /*--------------------------------------------------------------
 # Landing Page: Event

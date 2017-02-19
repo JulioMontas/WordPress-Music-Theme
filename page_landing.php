@@ -55,7 +55,7 @@ get_header(); ?>
 				<section>
 					<div>
 					  <p><?php the_field('summary'); ?></p>
-					  <a href="<?php the_field('artist_cta'); ?>">Read More</a>
+					  <a href="<?php the_field('artist_cta'); ?>" class="cta-white-line">Read More</a>
 				  </div>
 				</section>
 
@@ -95,7 +95,7 @@ get_header(); ?>
 	      			<?php endforeach; ?>
 	      	</ul>
 					<div class="cta-fullWidth">
-						<a href="<?php the_field('gallery_cta'); ?>">Gallery</a>
+						<a href="<?php the_field('gallery_cta'); ?>" class="cta-black-line">Gallery</a>
 					</div>
 
 	      </div>
@@ -103,6 +103,9 @@ get_header(); ?>
 			</div>
 
 			<div class="event">
+				<div class="summary-text">
+					<p><?php the_field( "event_summary" ); ?></p>
+				</div>
 				<div class="pagina-event">
 				<?php
 				while ( have_posts() ) : the_post();
@@ -139,9 +142,11 @@ get_header(); ?>
 				wp_reset_postdata();
 				?>
 				</div>
+
 				<div>
-				  <a href="<?php the_field( "event_cta_url" ); ?>"><?php the_field( "event_cta_text" ); ?></a>
+				  <a href="<?php the_field( "event_cta_url" ); ?>" class="cta-white-line"><?php the_field( "event_cta_text" ); ?></a>
 				</div>
+
 			</div>
 
 			<div class="contact">
