@@ -691,34 +691,8 @@ select::-ms-expand {
 
 
 /*--------------------------------------------------------------
-# JM: Gallery
+# JM: Page_Gallery.PHP
 --------------------------------------------------------------*/
-
-.tab-navbar {
-    display: inline-flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-left: 0;
-}
-
-.tab-navbar > li:nth-child(1) {margin-left: -40px;}
-
-.tab-navbar  > li {list-style: none}
-.tab-navbar  > li a{
-  color: white;
-  font-weight: 100;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
-}
-
-
-
-
-
-
-
 
 
 

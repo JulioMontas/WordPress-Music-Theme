@@ -92,7 +92,8 @@ function sonia_choi_music_2017_scripts() {
 	wp_enqueue_style( 'sonia-choi-music-2017-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'sonia-choi-music-2017-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'sonia-choi-music-2017-jquery-3-1-1', get_template_directory_uri() . '/js/jquery-3.1.1.min.js', array(), '20151215', true );
-	wp_enqueue_script( 'sonia-choi-music-2017-master', get_template_directory_uri() . '/js/master.js', array(), '20151215', true );
+	wp_enqueue_script( 'tabs', get_template_directory_uri() . '/js/jquery.tabslet.min.js', array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'tabs-init', get_template_directory_uri() . '/js/master.js', array( 'tabs' ), '1', true );
 	wp_enqueue_script( 'sonia-choi-music-2017-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -100,7 +101,6 @@ function sonia_choi_music_2017_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'sonia_choi_music_2017_scripts' );
-
 
 
 
