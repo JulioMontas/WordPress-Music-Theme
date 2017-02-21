@@ -44,7 +44,7 @@ get_header(); ?>
 						<li class="dropdown">
 			        <a href="#">Stream</a>
 			        <ul class="drop-nav">
-			          <?php the_field('Stream'); ?>
+			          <?php the_field('stream'); ?>
 			        </ul>
 			      </li>
 			    </ul>
@@ -54,15 +54,15 @@ get_header(); ?>
 			<div class="artist">
 				<section>
 					<div>
-					  <p><?php the_field('summary'); ?></p>
-					  <a href="<?php the_field('artist_cta'); ?>" class="cta-white-line">Read More</a>
+					  <p><?php the_field('artist_summary'); ?></p>
+					  <a href="<?php the_field('artist_cta_url'); ?>" class="cta-white-line"><?php the_field('artist_cta_text'); ?></a>
 				  </div>
 				</section>
 
 				<section>
 					<div>
   					<?php
-  		      $images = get_field('image_slide');
+  		      $images = get_field('artist_image_slide');
 
   		      if( $images ): ?>
   		          <div class="slider">
@@ -82,7 +82,7 @@ get_header(); ?>
 
 			<div class="gallery">
 				<?php
-	      $images = get_field('images');
+	      $images = get_field('gallery_image_slide');
 
 	      if( $images ): ?>
 	      <div id="slider" class="flexslider">
@@ -95,7 +95,7 @@ get_header(); ?>
 	      			<?php endforeach; ?>
 	      	</ul>
 					<div class="cta-fullWidth">
-						<a href="<?php the_field('gallery_cta'); ?>" class="cta-black-line">Gallery</a>
+						<a href="<?php the_field('gallery_cta_url'); ?>" class="cta-black-line"><?php the_field('gallery_cta_text'); ?></a>
 					</div>
 
 	      </div>
@@ -169,7 +169,7 @@ get_header(); ?>
 				'post_type'      => 'post',
 				'orderby'        => 'menu_order',
 				'order'          => 'ASC',
-				'posts_per_page' => 2
+				'posts_per_page' => 3
 				);
 
 				// The Query

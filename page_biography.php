@@ -33,7 +33,7 @@ get_header(); ?>
 				<section>
 					<div>
 						<?php
-						$images = get_field('artist_image');
+						$images = get_field('artist_image_slide');
 
 						if( $images ): ?>
 								<div class="slider">
@@ -64,7 +64,7 @@ get_header(); ?>
 					<h3>Songs Credits</h3>
 				</section>
 				<section>
-					<?php the_field('songs_credits'); ?>
+					<?php the_field('song_credits'); ?>
 				</section>
 			</div>
 

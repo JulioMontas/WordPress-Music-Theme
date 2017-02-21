@@ -59,13 +59,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   border-radius: 5px;
 }
 
-.cta-black-line {
-  border: 2px solid black;
-}
-
-.cta-white-line{
-  border: 2px solid white;
-}
+.cta-black-line{border: 2px solid black;}
+.cta-white-line{border: 2px solid white;}
 
 /*.cta-transparent{
   background: rgba(255, 255, 255, 0.0);
@@ -276,6 +271,11 @@ video#bgvid {
 }
 
 
+.landing-pagina .artist section:nth-child(2) div .slider {
+	max-width: 450px;
+}
+
+
 /*--------------------------------------------------------------
 # Landing Page: Gallery
 --------------------------------------------------------------*/
@@ -316,19 +316,25 @@ video#bgvid {
 /*--------------------------------------------------------------
 # Landing Page: Event
 --------------------------------------------------------------*/
+
+.landing-pagina .event .pagina-event > article {display: none;}
+
+.landing-pagina .event .summary-text {margin-top: 7%;}
+
+.landing-pagina .event .summary-text p { }
+
 .landing-pagina .event {
 	height: 80vh;
 	text-align: center;
 	margin-top: -27px;
 }
-.landing-pagina .event .pagina-event {
-	width: 80em;
-	margin: 0 auto;
-	margin-top: 17.5%;
-}
 
-.landing-pagina .event .pagina-event > article {display: none;}
-.landing-pagina .event > div:nth-child(2){margin-top: 10%;}
+.landing-pagina .event .pagina-event {
+	width: 90em;
+	margin: 0 auto;
+	margin-top: 10%;
+  margin-bottom: 10%;
+}
 
 /*--------------------------------------------------------------
 # Landing Page: Contact & Contact.php
@@ -342,8 +348,7 @@ video#bgvid {
 	width: 70em;
 	margin: 0 auto;
 }
-
-.contact > div:nth-child(1) > p:nth-child(2) {
+.contact > div:nth-child(1) > p:nth-child(1){
 	text-align: center;
 	font-weight: bold;
 	color: black;
@@ -430,8 +435,6 @@ select::-ms-expand {
  display: none; /* remove default arrow on ie10 and ie11*/
 }
 
-/*  Copyright (c) 2016 Copyright Holder All Rights Reserved.  */
-
 
 /*--------------------------------------------------------------
 # Landing Page: Blog
@@ -462,7 +465,7 @@ select::-ms-expand {
 
 
 /*--------------------------------------------------------------
-# Biography.php: Global
+# Biography.php
 --------------------------------------------------------------*/
 
 .pagina-biography .intro {
@@ -541,6 +544,7 @@ select::-ms-expand {
 	margin-top: -30px;
 }
 
+
 .pagina-event table tbody tr{
 	font-weight: 100;
 	font-size: 0.9em;
@@ -601,100 +605,88 @@ select::-ms-expand {
 
 
 
-
 /*--------------------------------------------------------------
 # JM: Music & Video
 --------------------------------------------------------------*/
 
-.music-column section,
-.video-column section{
-  opacity: 0.5;
-}
-.music-column section:hover,
-.video-column section:hover{
-  opacity: 1;
+.pagina-music-video{
+  width: 85%;
+  margin: 0 auto;
 }
 
-.music-column, .video-column {
-	background: rgba(255, 255, 255, 0.05);
+.pagina-music-video .music-column,
+.pagina-music-video .video-column {
 	padding: 15px;
-	width: 47.5%;
+  width: 47%;
 	float: left;
 	opacity: 0.85;
-	margin-right: 2.5%;
 	border-radius: 10px;
 	text-align: center;
 }
 
-.music-column > section > p > a {
-	color: #ccc;
-	text-decoration: none;
-	border: 2px solid white;
-	padding: 15px 60px;
-	font-weight: 400;
-	font-size: 0.8em;
-	letter-spacing: 1px;
-	background: rgba(255,255,255,0.1);
-  border-radius: 5px;
+.pagina-music-video .music-column{
+  margin-right: 3%;
 }
 
-.music-column > section > p > a:hover {
-	color: white;
-	background: rgba(255,255,255,0.0);
+.pagina-music-video .music-column section,
+.pagina-music-video .video-column section{
+  opacity: 0.4;
 }
 
-.music-column section > h5 {
-	margin-top: -20px;
-	margin-bottom: -15px;
+.pagina-music-video .music-column section:hover,
+.pagina-music-video .video-column section:hover{
+  opacity: 1;
 }
 
-.music-column section tr, .video-column section tr {
+.pagina-music-video .music-column section > h2 {
+  font-size: 1.3em;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.pagina-music-video .music-column > section .space {
+	margin-bottom: 60px;
+	margin-top: 40px;
+}
+
+.pagina-music-video .music-column section::after,
+.pagina-music-video .video-column section::after {
+	content: ' ';
+  display: block;
+	margin-bottom: 40px;
+	margin-top: 30px;
+}
+
+
+.pagina-music-video .music-column section tr,
+.pagina-music-video .video-column section tr {
   font-size: 0.8em;
   letter-spacing: 1px;
 }
 
-.music-column section > table > tbody > tr > td:nth-child(1),
-.video-column section > table > tbody > tr > td:nth-child(1) {
+.pagina-music-video .music-column section > table > tbody > tr > td:nth-child(1),
+.pagina-music-video .video-column section > table > tbody > tr > td:nth-child(1) {
 	text-align: left;
   color: thistle;
 }
 
-.music-column section > table > tbody > tr > td:nth-child(2),
-.video-column section > table > tbody > tr > td:nth-child(2) {
+.pagina-music-video .music-column section > table > tbody > tr > td:nth-child(2),
+.pagina-music-video .video-column section > table > tbody > tr > td:nth-child(2) {
 	font-weight: 700;
 	letter-spacing: 1px;
 }
 
-
-.music-column section > table > tbody > tr > td:nth-child(3),
-.video-column section > table > tbody > tr > td:nth-child(3) {
+.pagina-music-video .music-column section > table > tbody > tr > td:nth-child(3),
+.pagina-music-video .video-column section > table > tbody > tr > td:nth-child(3) {
 	text-align: right;
 }
-
-.music-column section > table > tbody > tr > td:nth-child(1),
-.video-column section > table > tbody > tr > td:nth-child(1),
-.music-column section > table > tbody > tr > td:nth-child(3),
-.video-column section > table > tbody > tr > td:nth-child(3),
-.music-column section > p  {
+.pagina-music-video .music-column section > table > tbody > tr > td:nth-child(1),
+.pagina-music-video .video-column section > table > tbody > tr > td:nth-child(1),
+.pagina-music-video .music-column section > table > tbody > tr > td:nth-child(3),
+.pagina-music-video .video-column section > table > tbody > tr > td:nth-child(3),
+.pagina-music-video .music-column section > p  {
 	color: #ccc;
-  /*color: palegreen;*/
-  /*color: thistle;*/
 }
-
-.music-column section::after,
-.video-column section::after {
-	content: ' ';
-	/* clear: right; */
-  display: block;
-	margin: 0 auto;
-	background: white;
-	width: 25%;
-	height: 6px;
-	margin-bottom: 40px;
-	margin-top: 40px;
-	border-radius: 5px;
-}
-
 
 
 
@@ -791,6 +783,11 @@ select::-ms-expand {
 .site-footer{margin-top: 100px;}
 
 /* Footer 01: Shop Button" */
+.footer-shop-btn div{
+  width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
 .footer-shop-btn {
 	background: linear-gradient(145deg, #283e75, #694a6d);
 	background-size: 100% 100%;
@@ -822,12 +819,6 @@ select::-ms-expand {
 	 50%{background-position:100% 50%}
 	 100%{background-position:0% 50%}
 }
-.footer-shop-btn div{
-  width: 600px;
-  text-align: center;
-  margin: 0 auto;
-
-}
 .footer-shop-btn h3 {
 	font-weight: 100;
 	font-size: 1.8em;
@@ -844,35 +835,26 @@ select::-ms-expand {
 	color: aliceblue;
 	font-size: 0.5em;
 }
-.footer-shop-btn a{
-  border: 2px solid white;
-  padding: 20px 40px;
-  text-decoration: none;
-  color: white;
-  letter-spacing: 1px;
-  font-size: 0.85em;
-  border-radius: 5px;
-}
 
 /* Footer 02: Newsletter */
 .footer-newsletter {
 	background: #F8F8F8;
 	padding: 45px 0px 1px;
 }
-.footer-newsletter #text-4 > div{
+.footer-newsletter #text-3 > div{
   width: 500px;
   margin: 0 auto;
 }
-.footer-newsletter input.wpcf7-form-control:nth-child(1){
+.footer-newsletter .wpcf7-text{
   background: white;
   border: 2px solid black;
   border-radius: 0;
   padding: 13px;
   font-size: 12px;
   width: 300px;
+  float: left;
 }
-
-.footer-newsletter input.wpcf7-form-control:nth-child(2) {
+.footer-newsletter .wpcf7-submit {
 	background: black;
 	color: white;
 	padding: 18px 50px;

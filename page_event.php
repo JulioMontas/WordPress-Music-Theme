@@ -31,7 +31,7 @@ get_header(); ?>
 			'post_type'      => 'event',
 			'orderby'        => 'date',
 			'order'          => 'ASC',
-			'posts_per_page' => 5
+			'posts_per_page' => 200
 			);
 
 			// The Query
