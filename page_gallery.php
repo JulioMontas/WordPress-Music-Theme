@@ -29,7 +29,7 @@ get_header(); ?>
 		</main><!-- #main -->
 
 		<div class="pagina-gallery">
-			<section class="tabs">
+
 				<?php
 
 				// FROM: http://wpbeaches.com/create-tabbed-content-in-wordpress-with-acf-and-tabslet/
@@ -45,16 +45,15 @@ get_header(); ?>
 				echo '</ul>';
 				        $i = 1;
 				        while ( have_rows('tabs') ) : the_row();
-				echo '<div id="tab-' . $i . '">' . get_sub_field( "tabbed_content" ) . '</div>';
+				echo '<div class="tab-content" id="tab-' . $i . '">' . get_sub_field( "tabbed_content" ) . '</div>';
 				        $i++;
 				        endwhile;
 				echo '</div>';
 				else :
 				    // no rows found
 				endif;
-
         ?>
-      </section><!-- .tabs -->
+
 		</div><!-- .pagina-gallery -->
 
 	</div><!-- #primary -->

@@ -693,6 +693,44 @@ select::-ms-expand {
 /*--------------------------------------------------------------
 # JM: Page_Gallery.PHP
 --------------------------------------------------------------*/
+.tabs{
+  width: 75%;
+  margin: 0 auto;
+}
+
+.tabs ul.horizontal {
+	margin-left: -40px;
+	display: flex;
+  justify-content: space-between;
+  /*align-items: baseline;*/
+}
+
+.tabs ul li a{
+  text-decoration: none;
+  color: white;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/*.tab-content{
+  background: red;
+  justify-content: space-between;
+}*/
+
+.tab-content::before {
+	content: "";
+	background: white;
+	height: 2px;
+	width: 100%;
+  margin-top: -25px;
+	display: block;
+}
+
+
+
+
+
 
 
 
