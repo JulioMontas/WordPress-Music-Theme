@@ -27,27 +27,28 @@ get_header(); ?>
 					<div>
 					  <img src="<?php the_field('large_logo'); ?>" alt="">
 					  <h2><?php the_field('subheaders'); ?></h2>
-						<a href="#latest-song"> ^ </a>
+						<a href="#latest-song"><i class="fa fa-angle-down fa-3x" aria-hidden="true"></i></a>
 					</div>
 				</section>
 			</div>
 
 			<div class="latest-song" id="latest-song">
 				<section>
-					<ul class="main-nav">
-			      <li class="dropdown">
-			        <a href="#">Download</a>
-			        <ul class="drop-nav">
-			          <?php the_field('download'); ?>
-			        </ul>
-			      </li>
-						<li class="dropdown">
-			        <a href="#">Stream</a>
-			        <ul class="drop-nav">
-			          <?php the_field('stream'); ?>
-			        </ul>
-			      </li>
-			    </ul>
+					<nav>
+             <ul>
+
+                 <li>
+									 <a href="#">Download</a>
+									 <ul><?php the_field('download'); ?></ul>
+								 </li>
+
+                 <li>
+									  <a href="#">Stream</a>
+                    <ul><?php the_field('stream'); ?></ul>
+                 </li>
+
+             </ul>
+         </nav>
 				</section>
 			</div>
 
@@ -179,7 +180,10 @@ get_header(); ?>
 				echo "<div>";
 				while ( $the_query->have_posts() ) : $the_query->the_post();
 				?>
-				<li><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_title(); ?></a></li>
+
+
+
+				<li><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_post_thumbnail('medium'); ?> <span><?php the_title(); ?></span></a></li>
 				<?php
 				endwhile;
 				echo "</div>";

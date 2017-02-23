@@ -59,8 +59,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   border-radius: 5px;
 }
 
+
 .cta-black-line{border: 2px solid black;}
 .cta-white-line{border: 2px solid white;}
+
 
 /*.cta-transparent{
   background: rgba(255, 255, 255, 0.0);
@@ -157,8 +159,11 @@ video#bgvid {
 }
 .intro section:nth-child(2) div a{
 	margin-top: 15%;
-	color: red;
+	color: white;
 	position: absolute;
+}
+.intro section:nth-child(2) div a:hover{
+  color:red;
 }
 
 .landing-pagina .intro section:first-child {width: 25%;}
@@ -198,48 +203,80 @@ video#bgvid {
   margin-top: 27%;
 }
 
+
 /* Nav Demo Styles -------------------- */
-.landing-pagina .latest-song section main-nav,
-.landing-pagina .latest-song section .drop-nav {
-  background: #2c3e50;
-}
-.landing-pagina .latest-song section .main-nav {
-  float: left;
-  border-radius: 4px;
-  margin-top: 8px;
-  border: solid 1px #1e2a36;
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+.landing-pagina .latest-song section nav ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
 }
 
-.landing-pagina .latest-song section .main-nav > li {
-  float: left;
-  border-left: solid 1px #1e2a36;
-}
-.landing-pagina .latest-song section .main-nav li:first-child {
-  border-left: none;
-}
-.landing-pagina .latest-song section .main-nav a {
-  color: #fff;
-  display: block;
-  padding: 10px 30px;
-  text-decoration: none;
+/* Positioning the navigation items inline */
+.landing-pagina .latest-song section nav ul li {
+    margin: 0px -7px 0 0;
+    display:inline-block;
+    border: 2px solid #FFF;
 }
 
-.landing-pagina .latest-song section .dropdown{
-  position: relative;
+/* Styling the links */
+.landing-pagina .latest-song section nav a {
+    display:block;
+    text-decoration:none;
+  font-size:20px;
+  line-height: 60px;
+  text-align: center;
+  width: 250px;
+  letter-spacing: 0.1em;
 }
 
-.landing-pagina .latest-song section .drop-nav {
-  position: absolute;
-  display: none;
+#latest-song > section:nth-child(1) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1),
+#latest-song > section:nth-child(1) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(2) > a:nth-child(1){
+  color: white;
+  font-size: 1em;
 }
 
-.landing-pagina .latest-song section .drop-nav li {
-  border-bottom: 1px solid rgba(255,255,255,.2);
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+.landing-pagina .latest-song section nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
 }
 
-.landing-pagina .latest-song section .dropdown:hover > .drop-nav {
-  display: block;
+/* Display Dropdowns on Hover */
+.landing-pagina .latest-song section nav ul li:hover > ul {
+    display:inherit;
 }
+
+/* Fisrt Tier Dropdown */
+.landing-pagina .latest-song section nav ul ul li {
+    display:list-item;
+    position: relative;
+    border: none;
+    background: rgba(255,255,255,0.3);
+    margin-bottom: 2px;
+}
+.landing-pagina .latest-song section nav ul ul li:hover {
+    background: rgba(255,255,255,0.9);
+}
+
+.landing-pagina .latest-song section nav ul ul a {
+  color: #333;
+  font-size: 0.8em;
+}
+
+/* Change ' +' in order to change the Dropdown symbol */
+/*.landing-pagina .latest-song section ul li > a:after { content:  ' +'; }
+.landing-pagina .latest-song section ul li > a:only-child:after { content: ''; }*/
+
+
+
+
+
 
 
 /*--------------------------------------------------------------
@@ -274,6 +311,13 @@ video#bgvid {
 .landing-pagina .artist section:nth-child(2) div .slider {
 	max-width: 450px;
 }
+
+
+.landing-pagina .artist section:nth-child(1) div a.cta-white-line,
+.event > div:nth-child(3) > a.cta-white-line:nth-child(1) {
+	color: #fff;
+}
+
 
 
 /*--------------------------------------------------------------
@@ -440,7 +484,6 @@ select::-ms-expand {
 # Landing Page: Blog
 --------------------------------------------------------------*/
 
-
 .landing-pagina .blog {
 	background: #f3f3f3;
 	margin-bottom: -165px;
@@ -458,6 +501,15 @@ select::-ms-expand {
 	justify-content: space-between;
 }
 
+.blog > div:nth-child(1) > div:nth-child(2) > li > a {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.blog > div:nth-child(1) > div:nth-child(2) > li > a > img {
+	margin: 0 auto;
+}
 
 
 

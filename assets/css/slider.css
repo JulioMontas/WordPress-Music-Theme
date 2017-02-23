@@ -18,8 +18,8 @@
   margin: 0;
   padding: 0;
   line-height: 0;
-  -moz-animation:slide-animation 15s infinite;
-  -webkit-animation:slide-animation 15s infinite;
+  -moz-animation:slide-animation 35s infinite;
+  -webkit-animation:slide-animation 35s infinite;
 }
 
 .slider ul:hover {
@@ -35,49 +35,43 @@
   padding: 0;
 }
 
+.slider > ul:nth-child(1) > li > p {
+	margin-top: -23px;
+	letter-spacing: 0.1em;
+}
+
 img {
   max-width: 100%;
   border-radius: 4px;
 }
+.slider > ul:nth-child(1) > li > p {
+	margin-top: -23px;
+	letter-spacing: 0.1em;
+}
 
-/*span {
-  position: relative;
-  height: 50px;
-  display: block;
-  font-size: 0.8em;
-  bottom: 0;
-  padding: 0.5px 20px 0px 20px;
-  margin-top: -50px;
-  overflow: hidden;
-  background-color:rgba(54,44,48,0.6);
-  color: #fcfcfc;
-  text-shadow: 0px 1px 1px #9d9d9d;
-  font-weight: normal;
-  border-radius: 4px;
-}*/
 
 @-webkit-keyframes slide-animation {
-  1% {left: 0%; opacity: 1;}
-  18% {left: 0%; opacity: 1}
-  19% {opacity: 0.2;}
-  20% {left: -100%; opacity: 1;}
-  58% {left: -100%; opacity: 1;}
-  59% {opacity: 0.2;}
-  60% {left: -200%; opacity: 1;}
-  98% {left: -200%; opacity: 1;}
-  99% {opacity: 0.5;}
-  100% {left: 0%;}
+  0% {opacity: 0.2;}
+  5% {left: 0%; opacity: 1;}
+  20% {left: 0%; opacity: 1;}
+  25% {opacity: 0.2;}
+  30% {left: -100%; opacity: 1;}
+  60% {left: -100%; opacity: 1;}
+  65% {opacity: 0.2;}
+  70% {left: -200%; opacity: 1;}
+  90% {left: -200%; opacity: 1;}
+  100% {opacity: 0.2;}
 }
 
 @-moz-keyframes slide-animation {
-  1% {left: 0%; opacity: 1;}
-  18% {left: 0%; opacity: 1}
-  19% {opacity: 0.2;}
-  20% {left: -100%; opacity: 1;}
-  58% {left: -100%; opacity: 1;}
-  59% {opacity: 0.2;}
-  60% {left: -200%; opacity: 1;}
-  98% {left: -200%; opacity: 1;}
-  99% {opacity: 0.5;}
-  100% {left: 0%;}
+  0% {opacity: 0.2;}
+  5% {left: 0%; opacity: 1;}
+  20% {left: 0%; opacity: 1;}
+  25% {opacity: 0.2;}
+  30% {left: -100%; opacity: 1;}
+  60% {left: -100%; opacity: 1;}
+  65% {opacity: 0.2;}
+  70% {left: -200%; opacity: 1;}
+  90% {left: -200%; opacity: 1;}
+  100% {opacity: 0.2;}
 }
