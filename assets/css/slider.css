@@ -22,34 +22,6 @@
   -webkit-animation:slide-animation 35s infinite;
 }
 
-.slider ul:hover {
-  -moz-animation-play-state:paused;
-  -webkit-animation-play-state:paused;
-}
-
-.slider li {
-  width: 10%;
-  list-style: none;
-  float: left;
-  margin: 0;
-  padding: 0;
-}
-
-.slider > ul:nth-child(1) > li > p {
-	margin-top: -23px;
-	letter-spacing: 0.1em;
-}
-
-img {
-  max-width: 100%;
-  border-radius: 4px;
-}
-.slider > ul:nth-child(1) > li > p {
-	margin-top: -23px;
-	letter-spacing: 0.1em;
-}
-
-
 @-webkit-keyframes slide-animation {
   0% {opacity: 0.2;}
   5% {left: 0%; opacity: 1;}
@@ -75,3 +47,43 @@ img {
   90% {left: -200%; opacity: 1;}
   100% {opacity: 0.2;}
 }
+
+.slider ul:hover {
+  -moz-animation-play-state:paused;
+  -webkit-animation-play-state:paused;
+}
+
+.slider li {
+	width: 10%;
+	list-style: none;
+	float: left;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.slider ul li p {
+	margin-top: -30px;
+	letter-spacing: 0.1em;
+  color: rgb(255, 205, 0);
+  text-shadow: 1px 1px 2px black;
+}
+
+.pagina-gallery .tabs .tab-content figure.wp-caption > figcaption {
+	margin-top: -1.9em;
+  letter-spacing: 0.1em;
+  color: rgb(255, 205, 0);
+  text-shadow: 1px 1px 2px black;
+}
+
+.event-preview .event-gallery p{
+  margin-top: -2.4em;
+  letter-spacing: 0.1em;
+  color: rgb(255, 205, 0);
+  text-shadow: 1px 1px 2px black;
+  text-align: center;
+}
+
+.slider li img:nth-child(1){ border: 8px solid rgb(255,255,255); }
+.slider li img:nth-child(2){ border: 8px solid rgb(200,200,200); }
+.slider li img:nth-child(3){ border: 8px solid rgb(150,150,150); }

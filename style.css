@@ -511,14 +511,13 @@ select::-ms-expand {
 	margin: 0 auto;
 }
 
-
-
-
-
-
 /*--------------------------------------------------------------
 # Biography.php
 --------------------------------------------------------------*/
+
+.pagina-biography #main{
+  display: none;
+}
 
 .pagina-biography .intro {
 	width: 1000px;
@@ -531,15 +530,12 @@ select::-ms-expand {
 	line-height: 1.5em;
 }
 
-.pagina-biography .artist-image section div ul li img {
-	border: 8px solid white;
-}
-
 .pagina-biography .full-summary section{
 	width: 900px;
 	margin: 0 auto;
 	font-weight: 100;
 }
+
 .pagina-biography .full-summary section span p:nth-child(2) {
 	font-weight: 400;
 	font-size: 1.5em;
@@ -555,11 +551,52 @@ select::-ms-expand {
 .pagina-biography .songs-credits section:nth-child(2),
 .pagina-biography .awards section:nth-child(1),
 .pagina-biography .awards section:nth-child(2){
-	width: 50%;
-	height: 70vh;
+	height: 50vh;
 }
 
 .pagina-biography .songs-credits section:nth-child(1),
+.pagina-biography .awards section:nth-child(2){
+	width: 40%;
+  text-align: center;
+}
+
+.pagina-biography .songs-credits section:nth-child(2),
+.pagina-biography .awards section:nth-child(1){
+	width: 60%;
+}
+
+.pagina-biography .awards section:nth-child(1),
+.pagina-biography .awards section:nth-child(2){
+  background: #303030;
+  color: #fcfcfc;
+}
+
+.pagina-biography .songs-credits section:nth-child(1),
+.pagina-biography .songs-credits section:nth-child(2),
+.pagina-biography .songs-credits section:nth-child(2) .tabs ul li a{
+  color: #303030;
+}
+
+.pagina-biography .songs-credits section:nth-child(1),
+.pagina-biography .songs-credits section:nth-child(2){
+  background: #fcfcfc;
+}
+
+
+.songs-credits > section:nth-child(2) > div,
+.awards > section:nth-child(1) > div {
+	margin-top: 10%;
+}
+
+/* Title in the center of the div */
+.songs-credits > section > h3,
+.awards > section > h3 {
+	margin-top: 32%;
+}
+
+
+
+/*.pagina-biography .songs-credits section:nth-child(1),
 .pagina-biography .awards section:nth-child(2){
 	background: rgba(255, 255, 255, 0.2);
 }
@@ -567,6 +604,13 @@ select::-ms-expand {
 .pagina-biography .songs-credits section:nth-child(2),
 .pagina-biography .awards section:nth-child(1){
 	background: rgba(255, 255, 255, 0.3);
+}*/
+
+
+
+/*To connect with the footer */
+.pagina-biography {
+ margin-bottom: -165px;
 }
 
 
@@ -626,35 +670,92 @@ select::-ms-expand {
 
 
 
+/*--------------------------------------------------------------
+# Event Preview
+--------------------------------------------------------------*/
+.event-info{
+  display: flex;
+  justify-content: space-between;
+  line-height: 0px;
+  letter-spacing: 0.1em;
+  margin-top: 5%;
+}
 
 
 
+.event-info p:nth-child(1),
+.event-preview .next-event p{
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 0.2em;
+  color: #4d4d4d;
+}
+
+
+/* Style for Place name and Date */
+.event-info h5 { margin-top: 0px;}
+
+
+/* Style for address and time */
+.event-info p:nth-child(3){ margin-top: -5px;}
+
+.event-info p:nth-child(3),
+.event-info p:nth-child(4){
+  color: #808080;
+  font-size: 0.8em;
+}
+
+/* Style for Ticket */
+.event-info a,
+.event-info a:active{ color: white;}
+.event-info .tickets{ text-align: center;}
+
+/* Style for Event main Tittle */
+.event-title{
+  color: palegreen;
+  margin-top: -2%;
+  margin-bottom: 5%;
+}
+
+
+/* Gallery */
+.details {
+  display: flex;
+  justify-content: space-between;
+}
 
 
 
+.event-preview .event-gallery ul{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
+.event-preview .event-gallery h2{
+  margin-top:10%;
+  margin-bottom:4%;
+}
 
+.event-preview .event-gallery p{
+  /*Save in the slide.css*/
+}
 
+.event-preview .next-event{
+  margin-top:8%;
+}
+.event-preview .next-event p{
+  margin-bottom:0px;
+}
+.event-preview .next-event nav .nav-links * a{
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 600;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.event-preview .next-event nav .nav-links * a:hover{
+  color: #4d4d4d;
+}
 
 
 /*--------------------------------------------------------------
@@ -743,8 +844,10 @@ select::-ms-expand {
 
 
 /*--------------------------------------------------------------
-# JM: Page_Gallery.PHP
+# JM: Page_Gallery.PHP and Page_Biography.PHP
 --------------------------------------------------------------*/
+
+/* Global */
 .tabs{
   width: 75%;
   margin: 0 auto;
@@ -754,40 +857,42 @@ select::-ms-expand {
 	margin-left: -40px;
 	display: flex;
   justify-content: space-between;
-  /*align-items: baseline;*/
 }
 
-.tabs ul li a{
-  text-decoration: none;
-  color: white;
+.tabs .horizontal li a{
+  color: #4d4d4d;
   font-weight: 100;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: 0.1em;
 }
 
-/*.tab-content{
-  background: red;
-  justify-content: space-between;
-}*/
-
-.tab-content::before {
-	content: "";
-	background: white;
-	height: 2px;
-	width: 100%;
-  margin-top: -25px;
-	display: block;
+.tabs .horizontal li.active a{
+  color: #fff;
 }
 
+.tabs .horizontal li.active a::after{
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background: #FFF;
+  margin-left: 20%;
+}
 
+/* Page_Gallery.php */
 
+.pagina-gallery .tabs .tab-content {
+	display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
-
-
-
-
-
-
+.pagina-gallery .tabs .tab-content *{margin-top: 0px;}
+.pagina-gallery .tabs .tab-content *:nth-child(even) {margin-top: 50px;}
+.pagina-gallery .tabs .tab-content figure.wp-caption > figcaption {
+	/* The text caption style is save in slider.css */
+}
 
 /*--------------------------------------------------------------
 # JM: Blog
@@ -1341,8 +1446,8 @@ dd {
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
+  border-radius: 4px;
 }
-
 figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
@@ -1443,7 +1548,7 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
+/*a {
 	color: royalblue;
 }
 
@@ -1464,7 +1569,7 @@ a:focus {
 a:hover,
 a:active {
 	outline: 0;
-}
+}*/
 
 /*--------------------------------------------------------------
 ## Menus *
@@ -1474,8 +1579,9 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
 }
-
 .main-navigation ul {
 	display: none;
 	list-style: none;
@@ -1483,65 +1589,28 @@ a:active {
 	padding-left: 0;
 }
 
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
 .main-navigation a {
-	display: block;
-	text-decoration: none;
+  font-size: 4em;
+  color: white;
+  text-decoration: none;
+  width: auto;
+  font-weight: 100;
+  letter-spacing: 0.1em;
 }
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul ul li {
+.main-navigation a:hover,
+.menu-toggle:hover {
+  color: #4d4d4d;
 
 }
 
-.main-navigation li:hover > a,
-.main-navigation li.focus > a {
+
+#primary-menu {
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 13%;
 }
 
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
 
-.main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
-}
 
 /* Small menu. */
 .menu-toggle,
@@ -1555,6 +1624,7 @@ a:active {
 	z-index: 200;
 }
 
+
 .menu-toggle{
 	position: fixed;
 	z-index: 100;
@@ -1562,23 +1632,13 @@ a:active {
 	right: 1em;
 	font-size: 1em;
 	text-transform: uppercase;
-	text-decoration: underline;
+	text-decoration: none;
 	background: none;
 	color: white;
 	border: none;
 	transition: all ease-out 300ms;
 }
 
-.menu-toggle:hover,
-.menu-toggle:focus{
-
-}
-
-#primary-menu {
-    width: 360px;
-    margin: 0 auto;
-    margin-top: 6%;
-}
 
 
 
@@ -1609,7 +1669,6 @@ a:active {
 	bottom: 0;
 	padding: 1em;
 	z-index: 1;
-	/*background: rgba(0, 0, 0, 0.7);*/
 }
 
 
@@ -1730,13 +1789,16 @@ a:active {
 /*--------------------------------------------------------------
 # Header *
 --------------------------------------------------------------*/
-.site-header {
-	color: white;
+/*.site-header {
+  text-decoration: none;
 	height: 5em;
 	position: fixed;
 	width: 100%;
-	border-bottom: 0.5px solid rgba(0,0,0,0.1);
-}
+}*/
+
+/*.site-header a {
+background: red;
+}*/
 
 
 /*--------------------------------------------------------------

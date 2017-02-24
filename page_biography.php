@@ -64,13 +64,57 @@ get_header(); ?>
 					<h3>Songs Credits</h3>
 				</section>
 				<section>
-					<?php the_field('song_credits'); ?>
+					<?php
+
+					// FROM: http://wpbeaches.com/create-tabbed-content-in-wordpress-with-acf-and-tabslet/
+
+					echo '<div class="tabs">
+					        <ul class="horizontal">';
+					if( have_rows('tabs_song_credits') ):
+					        $i = 1;
+					        while ( have_rows('tabs_song_credits' ) ) : the_row();
+					echo '<li><a href="#tab-' . $i . '">' . get_sub_field( "tab_link" ) . '</a></li>';
+					        $i++;
+					        endwhile;
+					echo '</ul>';
+					        $i = 1;
+					        while ( have_rows('tabs_song_credits') ) : the_row();
+					echo '<div class="tab-content" id="tab-' . $i . '">' . get_sub_field( "tabbed_content" ) . '</div>';
+					        $i++;
+					        endwhile;
+					echo '</div>';
+					else :
+					    // no rows found
+					endif;
+	        ?>
 				</section>
 			</div>
 
 			<div class="awards">
 				<section>
-					<?php the_field('awards'); ?>
+					<?php
+
+					// FROM: http://wpbeaches.com/create-tabbed-content-in-wordpress-with-acf-and-tabslet/
+
+					echo '<div class="tabs">
+					        <ul class="horizontal">';
+					if( have_rows('tabs_awards') ):
+					        $i = 1;
+					        while ( have_rows('tabs_awards' ) ) : the_row();
+					echo '<li><a href="#tab-' . $i . '">' . get_sub_field( "tab_link" ) . '</a></li>';
+					        $i++;
+					        endwhile;
+					echo '</ul>';
+					        $i = 1;
+					        while ( have_rows('tabs_awards') ) : the_row();
+					echo '<div class="tab-content" id="tab-' . $i . '">' . get_sub_field( "tabbed_content" ) . '</div>';
+					        $i++;
+					        endwhile;
+					echo '</div>';
+					else :
+					    // no rows found
+					endif;
+	        ?>
 				</section>
 				<section>
 					<h3>Awards</h3>
