@@ -669,6 +669,7 @@ video#bgvid {
 	margin-bottom: 2.5em;
 }
 
+
 .landing-pagina .contact form > div:nth-child(2) input,
 .landing-pagina .contact form > div:nth-child(3) input,
 .landing-pagina .contact form > div:nth-child(4) select,
@@ -683,6 +684,7 @@ video#bgvid {
 .pagina-contact form > div:nth-child(2) input,
 .pagina-contact form > div:nth-child(3) input{
 	margin-right: 1%;
+  margin-bottom: 10px;
 }
 
 .landing-pagina .contact form > div:nth-child(2) input,
@@ -691,8 +693,9 @@ video#bgvid {
 .pagina-contact form > div:nth-child(2) input,
 .pagina-contact form > div:nth-child(3) input,
 .pagina-contact form > div:nth-child(4) select{
-	width: 32.6666666667%;
+	width: 100%;
 }
+
 
 .landing-pagina .contact form > div:nth-child(5) textarea,
 .pagina-contact form > div:nth-child(5) textarea{
@@ -732,12 +735,13 @@ video#bgvid {
 	border: 1px solid black;
 }
 
+
+
 .landing-pagina .contact form input.wpcf7-form-control.wpcf7-submit,
 .pagina-contact form input.wpcf7-form-control.wpcf7-submit {
-	float: right;
 	padding: 15px 0px;
 	font-size: 16px;
-	width: 15%;
+	width: 100%;
 	margin-right: 0px;
 	margin-top: 10px;
 }
@@ -757,18 +761,31 @@ select::-ms-expand {
 /* Table */
 @media screen and (min-width: 40em) {
 
+  .landing-pagina .contact form > div:nth-child(2) input,
+  .landing-pagina .contact form > div:nth-child(3) input,
+  .landing-pagina .contact form > div:nth-child(4) select,
+  .pagina-contact form > div:nth-child(2) input,
+  .pagina-contact form > div:nth-child(3) input,
+  .pagina-contact form > div:nth-child(4) select{
+    width: 32.6666666667%;
+  }
+
 }
 
 /* Desktop 980px to 1280px  */
 @media screen and (min-width: 57em) {
 
+  .landing-pagina .contact form input.wpcf7-form-control.wpcf7-submit,
+  .pagina-contact form input.wpcf7-form-control.wpcf7-submit {
+    float: right;
+    width: 15%;
+  }
 
 }
 
-
-
 /* Desktop 1920px */
 @media screen and (min-width: 120em) {
+
 
   .landing-pagina .contact div{
     width: 70em;
