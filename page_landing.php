@@ -33,20 +33,18 @@ get_header(); ?>
 			</div>
 
 			<div class="latest-song" id="latest-song">
+				<h2><?php the_field('latest_song_name'); ?></h2>
 				<section>
 					<nav>
              <ul>
-
-                 <li>
-									 <a href="#">Download</a>
-									 <ul><?php the_field('download'); ?></ul>
-								 </li>
-
-                 <li>
-									  <a href="#">Stream</a>
-                    <ul><?php the_field('stream'); ?></ul>
-                 </li>
-
+               <li class="song-download">
+								 <a href="#">Download</a>
+								 <ul><?php the_field('download'); ?></ul>
+							 </li>
+               <li class="song-stream">
+								  <a href="#">Stream</a>
+                  <ul><?php the_field('stream'); ?></ul>
+               </li>
              </ul>
          </nav>
 				</section>

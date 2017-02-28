@@ -15,7 +15,7 @@
 		<div class="custom-box" style="text-align: center;">
 
 			<!-- <?php the_meta(); ?>  -->
-			<h1 class="entry-title">
+			<h1 class="entry-title-text">
 				<?php $my_title = get_post_meta( $post->ID, 'wgmdt_term_title', true ); echo $my_title; ?>
 			</h1>
 			<p class="p1">

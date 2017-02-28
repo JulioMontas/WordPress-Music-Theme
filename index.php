@@ -16,13 +16,13 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 
-		<div class="custom-box" style="text-align: center; margin-top: 107px;">
+		<div class="custom-box" style="text-align: center;">
 			<h1 class="entry-title">Blog</h1>
 			<p class="p1"><span class="s1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></p>
 		</div>
 
 		<main id="main" class="site-main blog-page" role="main">
-			<div class="">
+			<div class="blog-side">
      		<?php
      		if ( have_posts() ) :
 
@@ -54,7 +54,7 @@ get_header(); ?>
 
      		endif; ?>
 			</div>
-<?php get_sidebar(); ?>
+       <?php get_sidebar(); ?>
 		</main><!-- #main -->
 
 	</div><!-- #primary -->

@@ -1,4 +1,4 @@
-/*
+0/*
 Theme Name: Sonia Choi Music
 Theme URI: http://underscores.me/
 Author: Julio Montas
@@ -50,7 +50,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /* ---- Global ---- */
 
 .cta-black-line,
-.cta-white-line {
+.cta-white-line,
+.more-link {
+  /*padding: 20px 65px;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  border-radius: 5px;*/
+}
+
+
+.cta-white-line,
+.more-link{
+  border: 2px solid white;
   color: white;
   padding: 20px 65px;
   text-decoration: none;
@@ -59,9 +71,22 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
   border-radius: 5px;
 }
 
+.cta-black-line{
+  border: 2px solid black;
+  color: black;
+  padding: 20px 65px;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  border-radius: 5px;
+}
 
-.cta-black-line{border: 2px solid black;}
-.cta-white-line{border: 2px solid white;}
+
+.cta-white-line:hover,
+.cta-white-line:hover,
+.more-link:hover{
+  color: #4d4d4d;
+}
 
 
 /*.cta-transparent{
@@ -90,13 +115,13 @@ video#bgvid {
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
-    background: url(polina.jpg) no-repeat;
+    background: url(http://s3.amazonaws.com/soniachoi/content/uploads/2017/02/27215950/stardust-bg-1920-x-1080.jpg) no-repeat;
     background-size: cover;
 }
 
 @media screen and (max-device-width: 960px) {
     html {
-         background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed;
+         background: url(http://s3.amazonaws.com/soniachoi/content/uploads/2017/02/27215950/stardust-bg-1920-x-1080.jpg) #000 no-repeat center center fixed;
 				 z-index: 5;
     }
     #bgvid {
@@ -107,7 +132,7 @@ video#bgvid {
 /*--------------------------------------------------------------
 # JM: Intro Page Section IN Music & Video, Contact, Blog, Gallery, Event
 --------------------------------------------------------------*/
-.entry-title {
+.entry-title-text {
 	margin-top: 75px;
 	text-align: center;
 	font-size: 36px;
@@ -121,8 +146,37 @@ video#bgvid {
 	font-weight: 100;
 	letter-spacing: 1px;
 	line-height: 26px;
-	width: 750px;
+	width: 60%;
 	margin: 0 auto 85px;
+}
+
+
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+  .p1 {
+  	width: 90%;
+  }
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+  .p1 {
+    width: 80%;
+  }
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+  .p1 {
+    width: 60%;
+  }
+
+}
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+  .p1 {
+  	width: 40%;
+  }
 }
 
 
@@ -149,25 +203,71 @@ video#bgvid {
 .landing-pagina .intro section:last-child div {
    width: 100%;
    text-align: center;
-   margin-top: 25%;
+   margin-top: 35%;
 }
 .landing-pagina .intro section:last-child h2 {
-	font-size: 1em;
+	font-size: 0.7em;
 	font-weight: 100;
 	letter-spacing: 0.1em;
 	margin-top: 0px;
 }
 .intro section:nth-child(2) div a{
-	margin-top: 15%;
+	margin-top: 7%;
 	color: white;
-	position: absolute;
 }
 .intro section:nth-child(2) div a:hover{
-  color:red;
+  color: #4d4d4d;
 }
 
-.landing-pagina .intro section:first-child {width: 25%;}
-.landing-pagina .intro section:last-child {width: 75%;}
+.landing-pagina .intro section:first-child {
+  width: 25%;
+  display: none;
+}
+.landing-pagina .intro section:last-child {
+  width: 100%;
+}
+
+
+
+/* Logo Size */
+.intro section:nth-child(2) > div img{
+ max-width: 40%
+}
+
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+
+  /* Logo Size */
+ .intro section:nth-child(2) > div img{
+   max-width: 100%
+ }
+ .landing-pagina .intro section:last-child div {
+    margin-top: 25%;
+ }
+ .landing-pagina .intro section:last-child h2 {
+ 	font-size: 1em;
+ }
+
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+  .landing-pagina .intro section:first-child {
+    display:block;
+    width: 25%;
+  }
+  .landing-pagina .intro section:last-child {width: 75%;}
+}
+
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+
+}
 
 /*--------------------------------------------------------------
 # Landing Page: Lastest Song
@@ -200,9 +300,15 @@ video#bgvid {
 .landing-pagina .latest-song section{
   display: flex;
   justify-content: center;
-  margin-top: 27%;
 }
 
+.landing-pagina .latest-song h2 {
+	text-align: center;
+	margin-top: 40%;
+	font-size: 1em;
+	letter-spacing: 1px;
+  font-weight: 100;
+}
 
 /* Nav Demo Styles -------------------- */
 
@@ -218,19 +324,26 @@ video#bgvid {
 /* Positioning the navigation items inline */
 .landing-pagina .latest-song section nav ul li {
     margin: 0px -7px 0 0;
-    display:inline-block;
     border: 2px solid #FFF;
+}
+.song-download {
+	display: none;
 }
 
 /* Styling the links */
 .landing-pagina .latest-song section nav a {
-    display:block;
-    text-decoration:none;
+  color: white;
+  display:block;
+  text-decoration:none;
   font-size:20px;
   line-height: 60px;
   text-align: center;
   width: 250px;
   letter-spacing: 0.1em;
+}
+.landing-pagina .latest-song section nav a:hover,
+.landing-pagina .latest-song section nav ul li ~ .landing-pagina .latest-song section nav a:hover {
+  color: #333;
 }
 
 #latest-song > section:nth-child(1) > nav:nth-child(1) > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1),
@@ -242,7 +355,7 @@ video#bgvid {
 /* Hide Dropdowns by Default
  * and giving it a position of absolute */
 .landing-pagina .latest-song section nav ul ul {
-    display: none;
+    /*display: none;*/
     position: absolute;
     top: 100%;
 }
@@ -274,7 +387,33 @@ video#bgvid {
 .landing-pagina .latest-song section ul li > a:only-child:after { content: ''; }*/
 
 
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
 
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+  .landing-pagina .latest-song h2 {
+    font-size: 1.7em;
+  }
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+  /* Positioning the navigation items inline */
+  .landing-pagina .latest-song section nav ul li {
+      display:inline-block;
+  }
+  .landing-pagina .latest-song h2 {
+    margin-top: 19%;
+  }
+}
+
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+
+}
 
 
 
@@ -282,29 +421,30 @@ video#bgvid {
 /*--------------------------------------------------------------
 # Landing Page: Artist
 --------------------------------------------------------------*/
-
-.landing-pagina .artist{
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-
+.landing-pagina .artist {
+	display: flex;
+	flex-direction: column-reverse;
+	text-align: center;
 }
-.landing-pagina .artist section:first-child {width: 50%;}
-.landing-pagina .artist section:last-child {width: 50%;}
+
+.landing-pagina .artist section:first-child {width: 100%;}
+.landing-pagina .artist section:last-child {width: 100%;}
 
 .landing-pagina .artist section:first-child div {
-  width: 70%;
-  margin: 0 auto;
-  margin-top: 40%;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 0%;
+  margin-bottom: 20%;
 }
+
 .landing-pagina .artist section:first-child div p {
   font-size: 1em;
   margin-bottom: 40px;
 }
 
 .landing-pagina .artist section:nth-child(2) div {
-	margin-top: 25%;
+	margin-top: 0%;
+	margin-bottom: 0%;
 }
 
 
@@ -318,13 +458,53 @@ video#bgvid {
 	color: #fff;
 }
 
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+  .landing-pagina .artist section:first-child div {
+  	margin-bottom: 10%;
+  }
+
+  .landing-pagina .artist section:nth-child(2) div {
+	  margin-top: 13%;
+	  margin-bottom: 0%;
+  }
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+  .landing-pagina .artist section:first-child {width: 50%;}
+  .landing-pagina .artist section:last-child {width: 50%;}
+  .landing-pagina .artist{
+    flex-direction: row;
+  }
+  .landing-pagina .artist section:first-child div {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40%;
+  }
+  .landing-pagina .artist section:nth-child(2) div {
+  	margin-top: 25%;
+  	margin-bottom: 25%;
+  }
+}
+
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+
+}
+
 
 
 /*--------------------------------------------------------------
 # Landing Page: Gallery
 --------------------------------------------------------------*/
 .landing-pagina .gallery {
-	padding: 60px;
+	padding: 0px;
 }
 
 .landing-pagina .gallery,
@@ -334,8 +514,8 @@ video#bgvid {
 
 .cta-fullWidth {
 	text-align: center;
-	margin-top: -10%;
-	padding-bottom: 7%;
+	margin-top: 20%;
+	padding-bottom: 22%;
 }
 
 .landing-pagina .gallery .flexslider ul {
@@ -348,12 +528,44 @@ video#bgvid {
   font-size: 0.8em;
   letter-spacing: 0.1em;
 }
-.landing-pagina .gallery .flexslider ul li{
-  width: 23.5%;
+.landing-pagina .gallery .flexslider ul li {
+	width: 100%;
+	margin-bottom: 1em;
 }
 
 .landing-pagina .gallery .flexslider ul li p {
 	margin-top: -12%;
+}
+
+
+
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+  .landing-pagina .gallery {
+  	padding: 60px;
+  }
+  .landing-pagina .gallery .flexslider ul li {
+  	width: 24%;
+  	margin-bottom: 3em;
+  }
+  .cta-fullWidth {
+  	text-align: center;
+  	margin-top: -10%;
+  	padding-bottom: 7%;
+  }
+
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+}
+
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
 }
 
 
@@ -363,21 +575,77 @@ video#bgvid {
 
 .landing-pagina .event .pagina-event > article {display: none;}
 
-.landing-pagina .event .summary-text {margin-top: 7%;}
+.landing-pagina .event .summary-text {
+	margin-top: 25%;
+	margin-bottom: 30%;
+}
+
+.landing-pagina .event .summary-text > p:nth-child(2) {
+	text-align: center;
+	width: 90%;
+	margin: 0 auto;
+}
 
 .landing-pagina .event .summary-text p { }
 
 .landing-pagina .event {
-	height: 80vh;
-	text-align: center;
+	text-align: left;
 	margin-top: -27px;
 }
 
 .landing-pagina .event .pagina-event {
-	width: 90em;
-	margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.event > div:nth-child(3) {
+	margin-bottom: 25%;
+	margin-top: 20%;
+  text-align: center;
+}
+
+
+
+
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+
+  .landing-pagina .event .pagina-event {
+  	width: 90em;
+  }
+  .event > div:nth-child(3){
+    margin-bottom: 10%;
+  }
+
+  .landing-pagina .event .summary-text {
 	margin-top: 10%;
-  margin-bottom: 10%;
+	margin-bottom: 20%;
+  }
+
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+
+  .landing-pagina .event .summary-text {
+	  margin-top: 7%;
+	  margin-bottom: 0%;
+  }
+  .landing-pagina .event {
+  	text-align: center;
+  }
+
+}
+
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+
 }
 
 /*--------------------------------------------------------------
@@ -389,14 +657,14 @@ video#bgvid {
 }
 
 .landing-pagina .contact div{
-	width: 70em;
+	width: 95%;
 	margin: 0 auto;
 }
 .contact > div:nth-child(1) > p:nth-child(1){
 	text-align: center;
 	font-weight: bold;
 	color: black;
-	width: 600px;
+	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 2.5em;
 }
@@ -480,6 +748,46 @@ select::-ms-expand {
 }
 
 
+
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+
+
+}
+
+
+
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+
+  .landing-pagina .contact div{
+    width: 70em;
+  }
+
+  .contact > div:nth-child(1) > p:nth-child(1){
+    width: 600px;
+  }
+
+  /* reCAPTCHA */
+.landing-pagina .contact form > div.wpcf7-form-control > div:nth-child(1) {
+	float: left;
+	margin-top: 9px;
+  background: yellow;
+}
+
+}
+
+
 /*--------------------------------------------------------------
 # Landing Page: Blog
 --------------------------------------------------------------*/
@@ -493,22 +801,50 @@ select::-ms-expand {
 	display: none;
 }
 
-.blog div div:nth-child(2) {
-	/*background: antiquewhite;*/
-	width: 80em;
+
+.landing-pagina .blog div div:nth-child(2) {
+	width: 100%;
 	display: flex;
 	margin: 0 auto;
 	justify-content: space-between;
+	flex-direction: column;
 }
 
-.blog > div:nth-child(1) > div:nth-child(2) > li > a {
+.landing-pagina .blog > div:nth-child(1) > div:nth-child(2) > li > a {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 }
 
-.blog > div:nth-child(1) > div:nth-child(2) > li > a > img {
+.landing-pagina .blog > div:nth-child(1) > div:nth-child(2) > li > a > img {
 	margin: 0 auto;
+}
+
+
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+
+  .landing-pagina .blog div div:nth-child(2) {
+  	width: 80em;
+    flex-direction: row;
+
+  }
+
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+
+}
+
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+
 }
 
 /*--------------------------------------------------------------
@@ -615,7 +951,7 @@ select::-ms-expand {
 
 
 /*--------------------------------------------------------------
-# Blog.php: Global
+# Blog Page
 --------------------------------------------------------------*/
 
 .blog-page {
@@ -623,13 +959,107 @@ select::-ms-expand {
 	flex-direction: row;
 }
 
-.widget-area {
+.blog-side {
+	padding-right: 140px;
+}
+
+.blog-page article {
+	margin-bottom: 15%;
+}
+.blog-page article:last-child {
+	margin-bottom: 0%;
+}
+
+
+/* Single Blog Tittle */
+.blog-page .entry-title {
+	margin-top: 10px;
+	text-align: left;
+	font-size: 1.5em;
+	font-weight: 100;
+	letter-spacing: 1px;
+}
+.blog-page .entry-title a{
+  color: #FFF;
+  text-decoration: none;
+}
+.blog-page .entry-title a:hover{
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+/* Single Blog contect */
+.blog-page .entry-content p:nth-child(1){
+  margin-top: -10px;
+  text-align: justify;
+}
+
+.blog-page .entry-content p:nth-child(2){
+  float: right;
+}
+
+/* Single Blog posted on*/
+.blog-page .entry-meta {
+	margin-top: -55px;
+}
+
+
+
+
+
+/* Sidebar Widget area */
+.blog-page .widget-area {
 	width: 450px;
 }
 
-#recentcomments {
-    margin-left: -40px;
+.blog-page .widget-title {
+	font-size: 0.8em;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	font-weight: 100;
+  color: #4d4d4d;
 }
+
+.blog-page .widget-title::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 5px;
+  background-color: #4d4d4d;
+}
+
+.blog-page .widget ul {
+	margin: 0px;
+  line-height: 25px;
+}
+
+.blog-page .widget ul li {
+	margin-left: -40px;
+  margin-bottom: 15px;
+}
+
+.blog-page .widget ul li a {
+	color: #FFF;
+  text-decoration: none;
+}
+
+.blog-page .widget ul li a:hover {color: #4d4d4d;}
+
+/*--------------------------------------------------------------
+# Blog Preview
+--------------------------------------------------------------*/
+
+.blog-text-intro {
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+.blog-text-intro p {
+	margin-top: -20px;
+}
+
+
+
 
 
 /*--------------------------------------------------------------
@@ -647,15 +1077,22 @@ select::-ms-expand {
 	letter-spacing: 0.1em;
 	color: darkgray;
 }
+
+.pagina-event table tbody tr:nth-child(odd){
+  background: rgba(255,255,255,0.1);
+}
+
 .pagina-event table tbody tr:hover{
 	color: white;
 }
 
 .pagina-event table tbody tr td:nth-child(3){
-	/*color: white;*/
 	font-weight: 600;
-	text-align: center;
+  padding: 15px;
 }
+
+
+
 .pagina-event table tbody tr td:nth-child(3) a{
 	color: darkgray;
 	text-decoration: none;
@@ -665,6 +1102,51 @@ select::-ms-expand {
 }
 .pagina-event table tbody tr td:nth-child(4){
 	text-align: right;
+}
+
+.pagina-event table tbody tr td:nth-child(1),
+.pagina-event table tbody tr td:nth-child(2),
+.pagina-event table tbody tr td:nth-child(4){
+  display: none;
+}
+
+
+
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+
+
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+
+  .pagina-event table tbody tr td:nth-child(1),
+  .pagina-event table tbody tr td:nth-child(2),
+  .pagina-event table tbody tr td:nth-child(4){
+  	display: inline-flex;
+  }
+  .pagina-event table tbody tr:nth-child(odd){
+  background: none;
+  }
+
+  .pagina-event table tbody tr td:nth-child(1){float: left;}
+  .pagina-event table tbody tr td:nth-child(4){float: right;}
+
+  .pagina-event table tbody tr td:nth-child(3){
+    padding: 0px;
+  }
+
+}
+
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+
 }
 
 
@@ -953,21 +1435,36 @@ select::-ms-expand {
 
 /* Footer 01: Shop Button" */
 .footer-shop-btn div{
-  width: 600px;
   text-align: center;
   margin: 0 auto;
 }
-.footer-shop-btn {
+
+.sitebar-shop-btn{
+  height: 500px;
+  border: 15px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 20px 20px;
+  margin-bottom: 125px;
+}
+
+.footer-shop-btn{
+  height: 100%;
+  padding: 20px 0 60px;
+}
+
+.footer-shop-btn,
+.sitebar-shop-btn {
 	background: linear-gradient(145deg, #283e75, #694a6d);
 	background-size: 100% 100%;
 	width: 100%;
-	height: 100%;
-	padding: 20px 0 60px;
   -webkit-animation: AnimationName 49s ease infinite;
   -moz-animation: AnimationName 49s ease infinite;
   -o-animation: AnimationName 49s ease infinite;
   animation: AnimationName 49s ease infinite;
 }
+
+
 @-webkit-keyframes AnimationName {
 	 0%{background-position:0% 50%}
 	 50%{background-position:100% 50%}
@@ -988,6 +1485,29 @@ select::-ms-expand {
 	 50%{background-position:100% 50%}
 	 100%{background-position:0% 50%}
 }
+
+.sitebar-shop-btn .title {
+	font-weight: 100;
+	font-size: 1.35em;
+	margin-bottom: -25px;
+	letter-spacing: 1px;
+}
+
+.subtitle {
+	font-size: 0.9em;
+	letter-spacing: 1px;
+	color: #ccc;
+}
+
+.description {
+	margin-top: 70px;
+	margin-bottom: 100px;
+}
+
+
+
+
+
 .footer-shop-btn h3 {
 	font-weight: 100;
 	font-size: 1.8em;
@@ -1005,14 +1525,17 @@ select::-ms-expand {
 	font-size: 0.5em;
 }
 
+/* ##################### */
 /* Footer 02: Newsletter */
+/* ##################### */
 .footer-newsletter {
 	background: #F8F8F8;
 	padding: 45px 0px 1px;
 }
-.footer-newsletter #text-3 > div{
-  width: 500px;
-  margin: 0 auto;
+.footer-newsletter #text-3 > div {
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
 }
 .footer-newsletter .wpcf7-text{
   background: white;
@@ -1020,17 +1543,58 @@ select::-ms-expand {
   border-radius: 0;
   padding: 13px;
   font-size: 12px;
-  width: 300px;
+  width: 100%;
   float: left;
 }
+
 .footer-newsletter .wpcf7-submit {
 	background: black;
 	color: white;
-	padding: 18px 50px;
+	padding: 20px 40.5%;
 	border-radius: 0;
 	border: none;
-	margin-left: -5px;
 	letter-spacing: 1px;
+  width: 100%;
+	padding: 18px;
+}
+
+
+
+
+
+
+div.wpcf7 .ajax-loader {
+	display: none;
+}
+
+
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+  .footer-newsletter #text-3 > div{
+    width: 500px;
+  }
+  .footer-newsletter .wpcf7-text{
+    width: 300px;
+  }
+  .footer-newsletter .wpcf7-submit {
+    width: 40%;
+  }
+
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+
+
+}
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+
 }
 
 /* Footer 03: Social Media */
@@ -1039,7 +1603,7 @@ select::-ms-expand {
   padding: 35px 0 30px;
 }
 .footer-social-media nav{
-  width: 750px;
+  width: 90%;
   margin: 0 auto;
 }
 .footer-social-media nav ul{
@@ -1052,6 +1616,33 @@ select::-ms-expand {
   list-style: none;
 }
 
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+  .footer-social-media nav{
+    width: 50%;
+  }
+
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+
+
+}
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+
+}
+
+
+
+
+
 /* Footer 04: Info */
 .footer-info {
 	text-align: center;
@@ -1060,7 +1651,7 @@ select::-ms-expand {
 	font-weight: 100;
 }
 .footer-info a{
-  color: palegreen;
+  color: #98FB98; /*palegreen*/
   text-decoration: none;
 }
 .footer-info a:hover{
@@ -1299,9 +1890,10 @@ textarea {
 	line-height: 1.5;
 }
 
-.site-content{
+.site-content {
 	font-size: 1.125em;
 	line-height: 1.6em;
+	margin-top: 13px;
 }
 
 h1,
@@ -1446,7 +2038,7 @@ dd {
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
-  border-radius: 4px;
+  border-radius: 5px;
 }
 figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
@@ -1548,18 +2140,20 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
+
 /*a {
-	color: royalblue;
+  color: #fff;
+  text-decoration: none;
 }
 
 a:visited {
-	color: purple;
+	color: #fff;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #4d4d4d;
 }
 
 a:focus {
@@ -1591,7 +2185,8 @@ a:active {
 
 .main-navigation a {
   font-size: 4em;
-  color: white;
+  /*color: white;*/
+  color: #e55dae; /*palegreen*/
   text-decoration: none;
   width: auto;
   font-weight: 100;
@@ -1607,10 +2202,8 @@ a:active {
 #primary-menu {
 	width: 50%;
 	margin: 0 auto;
-	margin-top: 13%;
+	/* margin-top: 1%; */
 }
-
-
 
 /* Small menu. */
 .menu-toggle,
@@ -1619,24 +2212,26 @@ a:active {
 }
 
 .site-logo {
-  margin-top: 19px;
-  margin-left: 20px;
+	margin-top: 19px;
+	margin-left: 20px;
 	z-index: 200;
+	/* display: none; */
 }
 
-
-.menu-toggle{
+.menu-toggle {
 	position: fixed;
 	z-index: 100;
 	bottom: 1em;
 	right: 1em;
-	font-size: 1em;
+	font-size: 0.8em;
 	text-transform: uppercase;
 	text-decoration: none;
 	background: none;
-	color: white;
+	color: #e55dae;
 	border: none;
 	transition: all ease-out 300ms;
+	letter-spacing: 1px;
+	font-weight: 100;
 }
 
 
@@ -1654,9 +2249,9 @@ a:active {
 
 @media screen and (min-width: 40em) {
 	.menu-toggle{
-		top: 1.2em;
+		/*top: 1.2em;*/
 		bottom: auto;
-		right: 0em;
+		/*right: 0em;*/
 	}
 }
 
@@ -1821,15 +2416,17 @@ background: red;
 # Clobal
 --------------------------------------------------------------*/
 .site-main{
+  display: flex;
+  flex-direction: column;
 	margin:1.4em;
 	font-size: .8em;
 	line-height: 1.6em;
 }
 
+
 /* Mobile 320px  */
 @media screen and (min-width: 30em) {
-	.site-main{
-	}
+
 }
 
 /* Table */
@@ -1845,10 +2442,9 @@ background: red;
 		max-width: 70em;
 		margin: 1.8em auto;
 	}
-
-	/*#main > div:nth-child(1){
-		max-width: 53em;
-	}*/
+  .site-main {
+    flex-direction: row;
+  }
 
 }
 
@@ -1856,7 +2452,7 @@ background: red;
 @media screen and (min-width: 120em) {
 
 	.site-main{
-		max-width: 90em;
+		max-width: 80em;
 		margin: 1.8em auto;
 	}
 
