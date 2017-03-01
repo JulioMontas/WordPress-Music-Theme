@@ -1427,23 +1427,20 @@ select::-ms-expand {
 --------------------------------------------------------------*/
 
 .pagina-music-video{
-  width: 85%;
+  width: 95%;
   margin: 0 auto;
 }
 
 .pagina-music-video .music-column,
 .pagina-music-video .video-column {
 	padding: 15px;
-  width: 47%;
+  width: 100%;
 	float: left;
 	opacity: 0.85;
 	border-radius: 10px;
 	text-align: center;
 }
 
-.pagina-music-video .music-column{
-  margin-right: 3%;
-}
 
 .pagina-music-video .music-column section,
 .pagina-music-video .video-column section{
@@ -1503,6 +1500,30 @@ select::-ms-expand {
 .pagina-music-video .video-column section > table > tbody > tr > td:nth-child(3),
 .pagina-music-video .music-column section > p  {
 	color: #ccc;
+}
+
+
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+}
+/* Table */
+@media screen and (min-width: 40em) {
+}
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+  .pagina-music-video{
+    width: 85%;
+  }
+  .pagina-music-video .music-column,
+  .pagina-music-video .video-column {
+    width: 47%;
+  }
+  .pagina-music-video .music-column{
+    margin-right: 3%;
+  }
+}
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
 }
 
 
@@ -1591,11 +1612,9 @@ select::-ms-expand {
 /* Desktop 980px to 1280px  */
 @media screen and (min-width: 57em) {
 
-
-.tabs {
-	margin-top: 6.7%;
-}
-
+  .tabs {
+	  margin-top: 6.7%;
+  }
 
 }
 /* Desktop 1920px */
