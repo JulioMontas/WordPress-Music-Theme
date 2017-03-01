@@ -992,13 +992,6 @@ select::-ms-expand {
 .pagina-biography .songs-credits section:nth-child(2),
 .pagina-biography .awards section:nth-child(1),
 .pagina-biography .awards section:nth-child(2){
-	/*height: 50vh;*/
-}
-
-.pagina-biography .songs-credits section:nth-child(1),
-.pagina-biography .songs-credits section:nth-child(2),
-.pagina-biography .awards section:nth-child(1),
-.pagina-biography .awards section:nth-child(2){
 	width: 100%;
 }
 
@@ -1014,6 +1007,7 @@ select::-ms-expand {
   color: #fcfcfc;
 }
 
+
 .pagina-biography .songs-credits section:nth-child(1),
 .pagina-biography .songs-credits section:nth-child(2),
 .pagina-biography .songs-credits section:nth-child(2) .tabs ul li a{
@@ -1026,23 +1020,25 @@ select::-ms-expand {
 }
 
 
-.songs-credits > section:nth-child(2) > div,
-.awards > section:nth-child(1) > div {
-	margin-top: 10%;
+.pagina-biography .songs-credits section h3,
+.pagina-biography .awards section h3 {
+  margin-top: 20%;
+	margin-bottom: 20%;
+	font-size: 1.8em;
 }
 
-/* Title in the center of the div */
-.songs-credits > section > h3,
-.awards > section > h3 {
-	margin-top: 32%;
+/*bottom extra space*/
+.pagina-biography .awards section:nth-child(1),
+.pagina-biography .songs-credits section:nth-child(2) {
+	padding-bottom: 2em;
 }
+
 
 
 /*To connect with the footer */
 .pagina-biography {
- margin-bottom: -165px;
+	margin-bottom: -184px;
 }
-
 
 
 /* Mobile 320px  */
@@ -1061,6 +1057,15 @@ select::-ms-expand {
     text-align: left;
     margin-top: 5%;
 	  margin-bottom: 10%;
+   }
+
+   .pagina-biography .songs-credits section h3,
+   .pagina-biography .awards section h3 {
+     margin-top: 10%;
+   	 margin-bottom: 10%;
+   }
+   .pagina-biography {
+	    margin-bottom: -205px;
    }
 
 
@@ -1104,6 +1109,17 @@ select::-ms-expand {
    .pagina-biography .songs-credits section:nth-child(2),
    .pagina-biography .awards section:nth-child(1){
    	width: 60%;
+   }
+
+   .pagina-biography .songs-credits section h3,
+   .pagina-biography .awards section h3 {
+     margin-top: 10%;
+   	margin-bottom: 0%;
+   }
+
+   /*To connect with the footer */
+   .pagina-biography {
+    margin-bottom: -219px;
    }
 
 
@@ -1497,8 +1513,9 @@ select::-ms-expand {
 
 /* Global */
 .tabs{
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
+  margin-top: 0%;
 }
 
 .tabs ul.horizontal {
@@ -1515,18 +1532,36 @@ select::-ms-expand {
   letter-spacing: 0.1em;
 }
 
+.songs-credits section:nth-child(2) > div ul li.active a{
+  font-weight: 400;
+}
+
 .tabs .horizontal li.active a{
   color: #fff;
 }
 
-.tabs .horizontal li.active a::after{
+
+.tabs .horizontal li.active a::after,
+.songs-credits section:nth-child(2) > div ul li.active a::after{
   content: "";
   display: block;
   width: 80%;
   height: 2px;
-  background: #FFF;
   margin-left: 20%;
 }
+
+.tabs .horizontal li.active a::after{
+  background: #FFF;
+}
+
+.songs-credits section:nth-child(2) > div ul li.active a::after{
+  background: #333;
+}
+
+
+
+
+
 
 /* Page_Gallery.php */
 
@@ -1540,6 +1575,32 @@ select::-ms-expand {
 .pagina-gallery .tabs .tab-content *:nth-child(even) {margin-top: 50px;}
 .pagina-gallery .tabs .tab-content figure.wp-caption > figcaption {
 	/* The text caption style is save in slider.css */
+}
+
+
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+
+
+.tabs {
+	margin-top: 6.7%;
+}
+
+
+}
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+
 }
 
 /*--------------------------------------------------------------
