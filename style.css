@@ -133,7 +133,7 @@ video#bgvid {
 # JM: Intro Page Section IN Music & Video, Contact, Blog, Gallery, Event
 --------------------------------------------------------------*/
 .entry-title-text {
-	margin-top: 75px;
+	margin-top: 0px;
 	text-align: center;
 	font-size: 36px;
 	font-weight: 100;
@@ -141,21 +141,20 @@ video#bgvid {
 	letter-spacing: 1px;
 }
 
+
 .p1 {
 	font-size: 16px;
 	font-weight: 100;
 	letter-spacing: 1px;
 	line-height: 26px;
-	width: 60%;
+	width: 95%;
 	margin: 0 auto 85px;
 }
 
 
 /* Mobile 320px  */
 @media screen and (min-width: 30em) {
-  .p1 {
-  	width: 90%;
-  }
+
 }
 
 /* Table */
@@ -167,6 +166,9 @@ video#bgvid {
 
 /* Desktop 980px to 1280px  */
 @media screen and (min-width: 57em) {
+  .entry-title-text {
+  	margin-top: 75px;
+  }
   .p1 {
     width: 60%;
   }
@@ -174,9 +176,7 @@ video#bgvid {
 }
 /* Desktop 1920px */
 @media screen and (min-width: 120em) {
-  .p1 {
-  	width: 40%;
-  }
+
 }
 
 
@@ -304,7 +304,7 @@ video#bgvid {
 
 .landing-pagina .latest-song h2 {
 	text-align: center;
-	margin-top: 40%;
+	margin-top: 24%;
 	font-size: 1em;
 	letter-spacing: 1px;
   font-weight: 100;
@@ -352,6 +352,11 @@ video#bgvid {
   font-size: 1em;
 }
 
+#latest-song > div:nth-child(3) {
+	text-align: center;
+	margin-top: 85%;
+}
+
 /* Hide Dropdowns by Default
  * and giving it a position of absolute */
 .landing-pagina .latest-song section nav ul ul {
@@ -396,6 +401,10 @@ video#bgvid {
 @media screen and (min-width: 40em) {
   .landing-pagina .latest-song h2 {
     font-size: 1.7em;
+    margin-top: 35%;
+  }
+  #latest-song > div:nth-child(3) {
+  	margin-top: 45%;
   }
 }
 
@@ -407,6 +416,9 @@ video#bgvid {
   }
   .landing-pagina .latest-song h2 {
     margin-top: 19%;
+  }
+  #latest-song > div:nth-child(3) {
+    margin-top: 20%;
   }
 }
 
@@ -568,15 +580,22 @@ video#bgvid {
 @media screen and (min-width: 120em) {
 }
 
-
 /*--------------------------------------------------------------
 # Landing Page: Event
 --------------------------------------------------------------*/
 
-.landing-pagina .event .pagina-event > article {display: none;}
+.landing-pagina .event .pagina-event > article {
+  display: none;
+}
+
+.landing-pagina .event .pagina-event {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
 
 .landing-pagina .event .summary-text {
-	margin-top: 25%;
+	margin-top: 20%;
 	margin-bottom: 30%;
 }
 
@@ -586,26 +605,16 @@ video#bgvid {
 	margin: 0 auto;
 }
 
-.landing-pagina .event .summary-text p { }
-
 .landing-pagina .event {
 	text-align: left;
 	margin-top: -27px;
 }
 
-.landing-pagina .event .pagina-event {
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 10%;
-}
-
 .event > div:nth-child(3) {
-	margin-bottom: 25%;
-	margin-top: 20%;
+  margin-top: 30%;
+	margin-bottom: 30%;
   text-align: center;
 }
-
-
 
 
 /* Mobile 320px  */
@@ -616,16 +625,16 @@ video#bgvid {
 /* Table */
 @media screen and (min-width: 40em) {
 
-  .landing-pagina .event .pagina-event {
-  	width: 90em;
-  }
-  .event > div:nth-child(3){
-    margin-bottom: 10%;
-  }
+  .landing-pagina .event {text-align: center;}
 
   .landing-pagina .event .summary-text {
-	margin-top: 10%;
-	margin-bottom: 20%;
+  	margin-top: 15%;
+  	margin-bottom: 15%;
+  }
+
+  .event > div:nth-child(3) {
+    margin-top: 10%;
+  	margin-bottom: 10%;
   }
 
 }
@@ -634,12 +643,13 @@ video#bgvid {
 @media screen and (min-width: 57em) {
 
   .landing-pagina .event .summary-text {
-	  margin-top: 7%;
-	  margin-bottom: 0%;
+    margin-top: 10%;
+    margin-bottom: 0%;
   }
-  .landing-pagina .event {
-  	text-align: center;
-  }
+
+  .landing-pagina .event .summary-text > p:nth-child(2) {width: 40em;}
+
+  .landing-pagina .event .pagina-event {width: 90em;}
 
 }
 
@@ -659,14 +669,6 @@ video#bgvid {
 .landing-pagina .contact div{
 	width: 95%;
 	margin: 0 auto;
-}
-.contact > div:nth-child(1) > p:nth-child(1){
-	text-align: center;
-	font-weight: bold;
-	color: black;
-	width: 100%;
-	margin: 0 auto;
-	margin-bottom: 2.5em;
 }
 
 
@@ -695,7 +697,6 @@ video#bgvid {
 .pagina-contact form > div:nth-child(4) select{
 	width: 100%;
 }
-
 
 .landing-pagina .contact form > div:nth-child(5) textarea,
 .pagina-contact form > div:nth-child(5) textarea{
@@ -735,8 +736,6 @@ video#bgvid {
 	border: 1px solid black;
 }
 
-
-
 .landing-pagina .contact form input.wpcf7-form-control.wpcf7-submit,
 .pagina-contact form input.wpcf7-form-control.wpcf7-submit {
 	padding: 15px 0px;
@@ -751,6 +750,14 @@ select::-ms-expand {
  display: none; /* remove default arrow on ie10 and ie11*/
 }
 
+
+.landing-pagina .contact > div:nth-child(1) > p:nth-child(2) {
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+  color: #333;
+  margin-bottom: 15%;
+ }
 
 
 /* Mobile 320px  */
@@ -770,6 +777,10 @@ select::-ms-expand {
     width: 32.6666666667%;
   }
 
+  .landing-pagina .contact > div:nth-child(1) > p:nth-child(2) {
+    margin-bottom: 5%;
+   }
+
 }
 
 /* Desktop 980px to 1280px  */
@@ -780,6 +791,10 @@ select::-ms-expand {
     float: right;
     width: 15%;
   }
+  .landing-pagina .contact > div:nth-child(1) > p:nth-child(2) {
+	  margin-bottom: 5%;
+    width: 40em;
+   }
 
 }
 
@@ -789,10 +804,6 @@ select::-ms-expand {
 
   .landing-pagina .contact div{
     width: 70em;
-  }
-
-  .contact > div:nth-child(1) > p:nth-child(1){
-    width: 600px;
   }
 
   /* reCAPTCHA */
@@ -811,21 +822,53 @@ select::-ms-expand {
 
 .landing-pagina .blog {
 	background: #f3f3f3;
-	margin-bottom: -165px;
 	padding: 5em 0;
+  margin-bottom: -183px;
 }
+
 .landing-pagina .blog div article{
 	display: none;
 }
-
 
 .landing-pagina .blog div div:nth-child(2) {
 	width: 100%;
 	display: flex;
 	margin: 0 auto;
-	justify-content: space-between;
 	flex-direction: column;
 }
+
+.landing-pagina .blog div div:nth-child(2) li {
+	width: 80%;
+	margin: 15px auto;
+}
+
+
+.landing-pagina .blog div div:nth-child(2) li a {
+	background: white;
+	font-size: 0.9em;
+	font-weight: 400;
+	text-decoration: none;
+	color: #333;
+	line-height: 1.3em;
+	box-shadow: 1px 2px 5px #ccc;
+	border-radius: 5px;
+}
+
+.landing-pagina .blog div div:nth-child(2) li a:hover {
+  box-shadow: 0px 0px 0px #ccc;
+  color: #d7d7d7;
+}
+
+
+.landing-pagina .blog div div:nth-child(2) li a span{
+  padding: 20px 10px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.landing-pagina .blog div div:nth-child(2) li img{
+  border-radius: 5px 5px 0px 0px;
+}
+
 
 .landing-pagina .blog > div:nth-child(1) > div:nth-child(2) > li > a {
 	display: flex;
@@ -838,24 +881,53 @@ select::-ms-expand {
 }
 
 
+/* CTA Button */
+.landing-pagina .blog > div:nth-child(2) {
+	text-align: center;
+	margin-top: 19%;
+}
+
+
 /* Mobile 320px  */
 @media screen and (min-width: 30em) {
+
+
 
 }
 
 /* Table */
 @media screen and (min-width: 40em) {
 
-  .landing-pagina .blog div div:nth-child(2) {
-  	width: 80em;
-    flex-direction: row;
+  .landing-pagina .blog div div:nth-child(2) {justify-content: space-around;}
 
+  .landing-pagina .blog div div:nth-child(2) li{
+    width: 30%;
+    margin: 0;
+  }
+
+  .landing-pagina .blog div div:nth-child(2) {flex-direction: row;}
+
+  /* CTA Button */
+  .landing-pagina .blog > div:nth-child(2) {margin-top: 10%;}
+
+  .landing-pagina .blog {
+	  margin-bottom: -204px;
   }
 
 }
 
 /* Desktop 980px to 1280px  */
 @media screen and (min-width: 57em) {
+
+  .landing-pagina .blog div div:nth-child(2) {width: 80em;}
+  .landing-pagina .blog div div:nth-child(2) li{width: 300px;}
+
+  /* CTA Button */
+  .landing-pagina .blog > div:nth-child(2) {margin-top: 5%;}
+
+  .landing-pagina .blog {
+    margin-bottom: -219px;
+  }
 
 }
 
@@ -872,50 +944,68 @@ select::-ms-expand {
   display: none;
 }
 
+/* Intro text summary */
 .pagina-biography .intro {
-	width: 1000px;
+	width: 95%;
 	text-align: center;
 	margin: 0 auto;
-	margin-top: 130px;
-	margin-bottom: 70px;
-	font-size: 1.7em;
+	margin-top: 11%;
+	font-size: 1.3em;
 	font-weight: 100;
 	line-height: 1.5em;
 }
 
+
 .pagina-biography .full-summary section{
-	width: 900px;
+	width: 95%;
 	margin: 0 auto;
 	font-weight: 100;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  line-height: 2.2em;
+  letter-spacing: 0.1em;
+  text-align: center;
 }
 
 .pagina-biography .full-summary section span p:nth-child(2) {
 	font-weight: 400;
-	font-size: 1.5em;
-	line-height: 1.3em;
+	font-size: 1.2em;
 }
+
+
+
 
 .pagina-biography .songs-credits,
 .pagina-biography .awards{
 	display: flex;
 }
 
+.pagina-biography .songs-credits{
+  flex-direction: column;
+}
+
+.pagina-biography .awards{
+  flex-direction: column-reverse;
+}
+
 .pagina-biography .songs-credits section:nth-child(1),
 .pagina-biography .songs-credits section:nth-child(2),
 .pagina-biography .awards section:nth-child(1),
 .pagina-biography .awards section:nth-child(2){
-	height: 50vh;
+	/*height: 50vh;*/
 }
 
 .pagina-biography .songs-credits section:nth-child(1),
+.pagina-biography .songs-credits section:nth-child(2),
+.pagina-biography .awards section:nth-child(1),
 .pagina-biography .awards section:nth-child(2){
-	width: 40%;
-  text-align: center;
+	width: 100%;
 }
 
-.pagina-biography .songs-credits section:nth-child(2),
-.pagina-biography .awards section:nth-child(1){
-	width: 60%;
+
+.pagina-biography .songs-credits section:nth-child(1),
+.pagina-biography .awards section:nth-child(2){
+  text-align: center;
 }
 
 .pagina-biography .awards section:nth-child(1),
@@ -948,22 +1038,81 @@ select::-ms-expand {
 }
 
 
-
-/*.pagina-biography .songs-credits section:nth-child(1),
-.pagina-biography .awards section:nth-child(2){
-	background: rgba(255, 255, 255, 0.2);
-}
-
-.pagina-biography .songs-credits section:nth-child(2),
-.pagina-biography .awards section:nth-child(1){
-	background: rgba(255, 255, 255, 0.3);
-}*/
-
-
-
 /*To connect with the footer */
 .pagina-biography {
  margin-bottom: -165px;
+}
+
+
+
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+
+  /* Intro text summary */
+  .pagina-biography .intro {
+    font-size: 2em;
+  }
+  .pagina-biography .full-summary section {
+    text-align: left;
+    margin-top: 5%;
+	  margin-bottom: 10%;
+   }
+
+
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+
+  /* Intro text summary */
+  .pagina-biography .intro {
+  	width: 35em;
+    font-size: 1.7em;
+    margin-top: 6%;
+  }
+
+
+  .pagina-biography .full-summary section {
+	  width: 50em;
+	  margin-top: 3%;
+	  margin-bottom: 5%;
+	  line-height: 2.2em;
+	  letter-spacing: 0.1em;
+   }
+
+   .pagina-biography .full-summary section span p:nth-child(2) {
+   	font-size: 1.5em;
+   }
+
+
+   .pagina-biography .songs-credits,
+   .pagina-biography .awards{
+     flex-direction: row;
+   }
+
+   .pagina-biography .songs-credits section:nth-child(1),
+   .pagina-biography .awards section:nth-child(2){
+   	width: 40%;
+     text-align: center;
+   }
+
+   .pagina-biography .songs-credits section:nth-child(2),
+   .pagina-biography .awards section:nth-child(1){
+   	width: 60%;
+   }
+
+
+
+}
+
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+
 }
 
 
@@ -2201,9 +2350,8 @@ a:active {
 }
 
 .main-navigation a {
-  font-size: 4em;
-  /*color: white;*/
-  color: #e55dae; /*palegreen*/
+  font-size: 2em;
+  color: #e55dae;
   text-decoration: none;
   width: auto;
   font-weight: 100;
@@ -2212,15 +2360,16 @@ a:active {
 .main-navigation a:hover,
 .menu-toggle:hover {
   color: #4d4d4d;
-
 }
 
 
 #primary-menu {
-	width: 50%;
+	width: 90%;
 	margin: 0 auto;
-	/* margin-top: 1%; */
+	margin-top: 10%;
 }
+
+
 
 /* Small menu. */
 .menu-toggle,
@@ -2238,8 +2387,7 @@ a:active {
 .menu-toggle {
 	position: fixed;
 	z-index: 100;
-	bottom: 1em;
-	right: 1em;
+	right: 0.5em;
 	font-size: 0.8em;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -2247,30 +2395,65 @@ a:active {
 	color: #e55dae;
 	border: none;
 	transition: all ease-out 300ms;
-	letter-spacing: 1px;
-	font-weight: 100;
+	letter-spacing: 0.1em;
+	font-weight: 400;
 }
 
 
 
 
+
+
+/* Mobile 320px  */
+@media screen and (min-width: 30em) {
+
+}
+
+/* Table */
+@media screen and (min-width: 40em) {
+  .menu-toggle{
+		bottom: auto;
+    font-weight: 100;
+    right: 0.5em;
+	}
+  .main-navigation a {
+    font-size: 4em;
+  }
+
+  #primary-menu li {margin-top: 2%;}
+
+}
+
+/* Desktop 980px to 1280px  */
+@media screen and (min-width: 57em) {
+  .main-navigation a {
+    font-size: 5em;
+  }
+  #primary-menu {
+  	width: 50%;
+    margin-top: 5%;
+  }
+
+
+
+
+}
+/* Desktop 1920px */
+@media screen and (min-width: 120em) {
+  #primary-menu li {margin-top: 0%;}
+
+}
+
+
 /* To have the toggle menu in all screens up to 4080px */
-@media screen and (min-width: 255em) {
+/*@media screen and (min-width: 255em) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: block;
 	}
-}
-
-@media screen and (min-width: 40em) {
-	.menu-toggle{
-		/*top: 1.2em;*/
-		bottom: auto;
-		/*right: 0em;*/
-	}
-}
+}*/
 
 
 

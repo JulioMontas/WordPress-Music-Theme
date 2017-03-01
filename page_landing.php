@@ -48,6 +48,9 @@ get_header(); ?>
              </ul>
          </nav>
 				</section>
+				<div>
+				  <a href="<?php the_field( "latest_song_cta_url" ); ?>" class="cta-white-line"><?php the_field( "latest_song_cta_text" ); ?></a>
+				</div>
 			</div>
 
 			<div class="artist">
@@ -190,7 +193,9 @@ get_header(); ?>
 				wp_reset_postdata();
 				?>
 				</div>
-				<a href="#"></a>
+				<div>
+				  <a href="<?php the_field( "blog_cta_url" ); ?>" class="cta-black-line"><?php the_field( "blog_cta_text" ); ?></a>
+				</div>
 			</div>
 		</div>
 		<main id="main" class="site-main" role="main">
