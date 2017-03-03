@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">
 
-		<div class="custom-box" style="text-align: center;">
+		<div class="custom-box animated once bounceInDown" style="text-align: center;">
 
 			<!-- <?php the_meta(); ?>  -->
 			<h1 class="entry-title-text">

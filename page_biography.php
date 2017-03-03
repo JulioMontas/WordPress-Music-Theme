@@ -21,7 +21,7 @@ get_header(); ?>
 
 		<div class="pagina-biography">
 
-			<div class="intro">
+			<div class="intro animated once bounceInDown">
 				<section>
 					<span>
 						<p><?php the_field('intro_summary'); ?></p>
@@ -51,7 +51,7 @@ get_header(); ?>
 				</section>
 			</div>
 
-			<div class="full-summary">
+			<div class="full-summary animated once fadeIn">
 				<section>
 					<span>
 						<p><?php the_field('full_summary'); ?></p>
@@ -59,7 +59,7 @@ get_header(); ?>
 				</section>
 			</div>
 
-			<div class="songs-credits">
+			<div class="songs-credits fade-in">
 				<section>
 					<h3>Songs Credits</h3>
 				</section>
@@ -90,7 +90,7 @@ get_header(); ?>
 				</section>
 			</div>
 
-			<div class="awards">
+			<div class="awards fade-in">
 				<section>
 					<?php
 

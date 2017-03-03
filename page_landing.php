@@ -21,10 +21,10 @@ get_header(); ?>
 		<div class="landing-pagina">
 			<div class="intro">
 				<section>
-					<img src="<?php the_field('artist_image'); ?>" alt="">
+					<img class="animated once bounceInLeft" src="<?php the_field('artist_image'); ?>" alt="">
 				</section>
 				<section>
-					<div>
+					<div class="animated once bounceInRight">
 					  <img src="<?php the_field('large_logo'); ?>" alt="">
 					  <h2><?php the_field('subheaders'); ?></h2>
 						<a href="#latest-song"><i class="fa fa-angle-down fa-3x" aria-hidden="true"></i></a>
@@ -33,9 +33,9 @@ get_header(); ?>
 			</div>
 
 			<div class="latest-song" id="latest-song">
-				<h2><?php the_field('latest_song_name'); ?></h2>
+				<h2 class="fade-in"><?php the_field('latest_song_name'); ?></h2>
 				<section>
-					<nav>
+					<nav class="fade-in">
              <ul>
                <li class="song-download">
 								 <a href="#">Download</a>
@@ -48,20 +48,20 @@ get_header(); ?>
              </ul>
          </nav>
 				</section>
-				<div>
+				<div class="fade-in">
 				  <a href="<?php the_field( "latest_song_cta_url" ); ?>" class="cta-white-line"><?php the_field( "latest_song_cta_text" ); ?></a>
 				</div>
 			</div>
 
 			<div class="artist">
 				<section>
-					<div>
+					<div class="fade-in">
 					  <p><?php the_field('artist_summary'); ?></p>
 					  <a href="<?php the_field('artist_cta_url'); ?>" class="cta-white-line"><?php the_field('artist_cta_text'); ?></a>
 				  </div>
 				</section>
 
-				<section>
+				<section class="fade-in">
 					<div>
   					<?php
   		      $images = get_field('artist_image_slide');
@@ -87,7 +87,7 @@ get_header(); ?>
 	      $images = get_field('gallery_image_slide');
 
 	      if( $images ): ?>
-	      <div id="slider" class="flexslider">
+	      <div id="slider" class="flexslider fade-in">
 	      	<ul class="slides">
 	      			<?php foreach( $images as $image ): ?>
 	      					<li>
@@ -105,10 +105,10 @@ get_header(); ?>
 			</div>
 
 			<div class="event">
-				<div class="summary-text">
+				<div class="summary-text fade-in">
 					<p><?php the_field( "event_summary" ); ?></p>
 				</div>
-				<div class="pagina-event">
+				<div class="pagina-event fade-in">
 				<?php
 				while ( have_posts() ) : the_post();
 					get_template_part( 'template-parts/content-page-w-title', 'page' );
@@ -146,20 +146,20 @@ get_header(); ?>
 				</div>
 
 				<div>
-				  <a href="<?php the_field( "event_cta_url" ); ?>" class="cta-white-line"><?php the_field( "event_cta_text" ); ?></a>
+				  <a href="<?php the_field( "event_cta_url" ); ?>" class="cta-white-line fade-in"><?php the_field( "event_cta_text" ); ?></a>
 				</div>
 
 			</div>
 
 			<div class="contact">
-				<div class="">
+				<div class="fade-in">
 					<p><?php the_field( "contact_summary" ); ?></p>
 					<?php the_field( "contact_info" ); ?>
 				</div>
 			</div>
 
 			<div class="blog">
-				<div class="">
+				<div class="fade-in">
 				<?php
 				while ( have_posts() ) : the_post();
 					get_template_part( 'template-parts/content-page-w-title', 'page' );
@@ -194,7 +194,7 @@ get_header(); ?>
 				?>
 				</div>
 				<div>
-				  <a href="<?php the_field( "blog_cta_url" ); ?>" class="cta-black-line"><?php the_field( "blog_cta_text" ); ?></a>
+				  <a href="<?php the_field( "blog_cta_url" ); ?>" class="cta-black-line fade-in"><?php the_field( "blog_cta_text" ); ?></a>
 				</div>
 			</div>
 		</div>

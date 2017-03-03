@@ -28,7 +28,7 @@ get_header(); ?>
 			?>
 		</main><!-- #main -->
 
-		<div class="pagina-gallery">
+		<div class="pagina-gallery animated once fadeIn">
 
 				<?php
 
@@ -48,10 +48,10 @@ get_header(); ?>
 				echo '<div class="tab-content" id="tab-' . $i . '">' . get_sub_field( "tabbed_content" ) . '</div>';
 				        $i++;
 				        endwhile;
-				echo '</div>';
 				else :
 				    // no rows found
 				endif;
+
         ?>
 
 		</div><!-- .pagina-gallery -->

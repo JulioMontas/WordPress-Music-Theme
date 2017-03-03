@@ -32,7 +32,7 @@ get_header(); ?>
 
 		<div class="pagina-music-video">
 
-			  <div class="music-column">
+			  <div class="music-column animated once fadeIn">
 					<?php
           if( have_rows('music_album') ):
               while( have_rows('music_album') ) : the_row();
@@ -68,7 +68,7 @@ get_header(); ?>
 
 
 
-			  <div class="video-column">
+			  <div class="video-column animated once fadeIn">
 					<?php
           if( have_rows('music_video') ):
               while( have_rows('music_video') ) : the_row();

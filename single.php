@@ -10,12 +10,12 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main blog-preview" role="main">
 
 		<?php
 		while ( have_posts() ) : the_post();
 
-		  echo "<div class='blog-text-intro'>";
+		  echo "<div class='blog-text-intro animated once bounceInDown'>";
 			    echo "<h2>";
 			     the_title();
 			    echo "</h2>";
@@ -25,7 +25,7 @@ get_header(); ?>
 			echo "</div>";
 			echo "<!-- .blog-text-intro -->";
 
-			echo "<div class='blog-text-contect'>";
+			echo "<div class='blog-text-contect animated once fadeIn'>";
 			the_post_thumbnail('larger');
 
 			get_template_part( 'template-parts/content-page-no-title', get_post_format() );
@@ -33,7 +33,7 @@ get_header(); ?>
 			echo "<!-- .blog-text-contect -->";
 
 
-			echo "<div class='blog-more-post'>";
+			echo "<div class='blog-more-post animated once fadeIn'>";
 			  the_post_navigation();
 			echo "</div>";
 			echo "<!-- .blog-more-post -->";
